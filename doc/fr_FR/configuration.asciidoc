@@ -7,20 +7,24 @@ Après avoir installé le plugin, il vous suffit de l'activer.
 
 Ce plugin n'a aucune configuration particulière mais peut-être paramètrer graphiquement et avec certaines options :
 
-image:FlipClock_screenshot1.png[]
+image:Opening_screenshot1.png[]
 
-image:FlipClock_screenshot2.png[]
+image:Opening_screenshot2.png[]
 
-image:FlipClock_screenshot3.png[]
+image:Opening_screenshot3.png[]
 
 
 Vous retrouverez ces parametres dans la page du plugin :
-image:FlipClock_screenshot4.png[]
+
+image:Opening_screenshot4.png[]
 
 Il suffit de choisir l'equipement voulu ou d'en créer un nouveau pour acceder a son parametrage :
-image:FlipClock_screenshot5.png[]
-image:FlipClock_screenshot6.png[]
-image:FlipClock_screenshot7.png[]
+
+image:Opening_screenshot5.png[]
+
+image:Opening_screenshot6.png[]
+
+image:Opening_screenshot7.png[]
 
 Chaque paramètre est expliqué directement sur la page de configuration, survolez l'icone "?" pour avoir une popup explicative.
 

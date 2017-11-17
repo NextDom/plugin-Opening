@@ -3,7 +3,9 @@
 
 == Description du Plugin
 
-Ce plugin sert à créer un Ouvrant graphique combinant plusieurs éléments physique en un widget.
+Ce plugin sert à créer un Ouvrant graphique combinant plusieurs éléments physique en un widget :
+
+image:Opening_screenshot10.png[]
 
 L'ouvrant est caractérisé par une famille :
 
@@ -34,15 +36,19 @@ Enfin par toute une foulée d'options telles que :
 - Etats textuels
 etc..
 
-On peut configurer chaque element parmis une liste de modèles visualisable dans la galerie de la page de configuration du plugin.
-image:FlipClock_screenshot1.png[]
-image:FlipClock_screenshot2.png[]
-image:FlipClock_screenshot3.png[]
+On peut configurer chaque element parmis une liste de modèles visualisable dans la galerie de la page de configuration du plugin :
+
+image:Opening_screenshot1.png[]
+
+image:Opening_screenshot2.png[]
+
+image:Opening_screenshot3.png[]
 
 Une petite copie d'écran du rendu du widget du plugin :
-image:FlipClock_screenshot8.png[]
-image:FlipClock_screenshot9.png[]
-image:FlipClock_screenshot10.png[]
+
+image:Opening_screenshot8.png[]
+
+image:Opening_screenshot9.png[]
 
 === Retour
 link:index.asciidoc[]
