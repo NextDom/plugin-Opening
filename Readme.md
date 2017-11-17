@@ -1,3 +1,5 @@
+:sourcedir: ../doc/fr_FR
+
 # Plugin Opening pour Jeedom
 
 <img src="doc/images/Opening_icon.png" align="right">
@@ -11,6 +13,6 @@ Grab it on the [Market page](https://www.jeedom.com/market/index.php?v=d&p=marke
 
 ### Documentation
 
-link:doc/fr_FR/index.asciidoc[]
+link:{sourcedir}/index.asciidoc[]
 
 <img src="doc/images/Opening_screenshot10.png" align="center">
