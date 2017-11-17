@@ -1,0 +1,11 @@
+:imagesdir: ../images
+:icons:
+
+== F.A.Q. du plugin
+
+Comment avoir le fond transparent sur mon ouvrant ?
+
+- Via la configuration avancé de l'ouvrant.
+
+=== Retour
+link:index.asciidoc[]

@@ -1,0 +1,10 @@
+{
+	"id" : "Opening",
+	"name" : "Opening",
+	"version": "1.0",
+	"description" : "Plugin pour créer un ouvrant paramètrable à souhait et intégrant plusieurs calques et capteurs en un widget",
+	"licence" : "AGPL",
+	"author" : "Virux, CyrilPhoenix, Slobberbone",
+	"require" : "2.3",
+	"category" : "automatisation"
+}

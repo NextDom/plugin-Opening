@@ -1,0 +1,223 @@
+/*customselect*/
+.Openingconfig .customselect {
+	width: 100%;
+	height: auto;
+	cursor: pointer;
+}
+
+.Openingconfig .customselect.btn-group.open .dropdown-toggle {
+	box-shadow: none;
+}
+
+.Openingconfig .customselect .dropdown-toggle .glyphicon-chevron-down {
+	right: 5px;
+	position: absolute;
+	top: 20px;
+}
+
+.Openingconfig .customselect img {
+	width: auto;
+	height: 40px;
+	margin-right:10px;
+}
+
+.Openingconfig .customselect ul {
+	height: 200px;
+	overflow: auto;
+	width: 100%;
+}
+
+
+.Openingconfig select.model {
+	width:350px;
+}
+
+.Openingconfig .customselect .dropdown-menu>li:hover,
+.Openingconfig .customselect .dropdown-menu>li.active{
+	background: #585e61;
+} 
+/*customposition*/
+
+.Openingconfig .customposition {
+	cursor: pointer;
+}
+
+.Openingconfig .customposition div.active{
+	color:red;
+}
+
+/*modeadvanced*/
+.Openingconfig .modeadvancedVisible {
+	display:none;
+}
+.Openingconfig.modeadvanced .modeadvancedVisible {
+	display:inherit;
+}
+
+/*modeStore*/
+.Openingconfig .modeStoreVisible {
+	display:none;
+}
+.Openingconfig.modeStore .modeStoreVisible {
+	display:inherit;
+}
+
+/*modeLock*/
+.Openingconfig .modeLockVisible {
+	display:none;
+}
+.Openingconfig.modeLock .modeLockVisible {
+	display:inherit;
+}
+
+/*modeBat*/
+.Openingconfig .modeBatVisible {
+	display:none;
+}
+.Openingconfig.modeBat .modeBatVisible {
+	display:inherit;
+}
+
+/*modeAlarm*/
+.Openingconfig .modeAlarmVisible {
+	display:none;
+}
+.Openingconfig.modeAlarm .modeAlarmVisible {
+	display:inherit;
+}
+
+/*modeMotion*/
+.Openingconfig .modeMotionVisible {
+	display:none;
+}
+.Openingconfig.modeMotion .modeMotionVisible {
+	display:inherit;
+}
+
+/*modeWeather*/
+.Openingconfig .modeWeatherVisible {
+	display:none;
+}
+.Openingconfig.modeWeather .modeWeatherVisible {
+	display:inherit;
+}
+
+/*modeWeather*/
+.Openingconfig .modeTemperatureVisible {
+	display:none;
+}
+.Openingconfig.modeTemperature .modeTemperatureVisible {
+	display:inherit;
+}
+
+/*preview*/
+.preview .OpeningWrp {
+	max-width:140px;
+	max-height:140px;
+}
+
+/*preview percent*/
+.preview .OpeningWrp .layer.store img.percent0 {
+	top:-200%;
+	left:0%;
+}
+.preview .OpeningWrp .layer.store img.percent10 {
+	top:-180%;
+	left:0%;
+}
+.preview .OpeningWrp .layer.store img.percent20 {
+	top:-160%;
+	left:0%;
+}
+.preview .OpeningWrp .layer.store img.percent30 {
+	top:-140%;
+	left:0%;
+}
+.preview .OpeningWrp .layer.store img.percent40 {
+	top:-120%;
+	left:0%;
+}
+.preview .OpeningWrp .layer.store img.percent50 {
+	top:-100%;
+	left:0%;
+}
+.preview .OpeningWrp .layer.store img.percent60 {
+	top:-80%;
+	left:0%;
+}
+.preview .OpeningWrp .layer.store img.percent70 {
+	top:-60%;
+	left:0%;
+}
+.preview .OpeningWrp .layer.store img.percent80 {
+	top:-40%;
+	left:0%;
+}
+.preview .OpeningWrp .layer.store img.percent90 {
+	top:-20%;
+	left:0%;
+}
+.preview .OpeningWrp .layer.store img.percent100 {
+	top:-0%;
+	left:0%;
+}
+
+.preview .OpeningWrp.family6 .layer.store img.percent0 {
+	left:-200%;
+	top:0%;
+}
+.preview .OpeningWrp.family6 .layer.store img.percent10 {
+	left:-180%;
+	top:0%;
+}
+.preview .OpeningWrp.family6 .layer.store img.percent20 {
+	left:-160%;
+	top:0%;
+}
+.preview .OpeningWrp.family6 .layer.store img.percent30 {
+	left:-140%;
+	top:0%;
+}
+.preview .OpeningWrp.family6 .layer.store img.percent40 {
+	left:-120%;
+	top:0%;
+}
+.preview .OpeningWrp.family6 .layer.store img.percent50 {
+	left:-100%;
+	top:0%;
+}
+.preview .OpeningWrp.family6 .layer.store img.percent60 {
+	left:-80%;
+	top:0%;
+}
+.preview .OpeningWrp.family6 .layer.store img.percent70 {
+	left:-60%;
+	top:0%;
+}
+.preview .OpeningWrp.family6 .layer.store img.percent80 {
+	left:-40%;
+	top:0%;
+}
+.preview .OpeningWrp.family6 .layer.store img.percent90 {
+	left:-20%;
+	top:0%;
+}
+.preview .OpeningWrp.family6 .layer.store img.percent100 {
+	left:-0%;
+	top:0%;
+}
+
+/*popover*/
+i[data-toggle="popover"] {
+	cursor:help;
+}
+
+.popover-title {
+	background-color: #4B7731; 
+	color: #FFFFFF; 
+}
+ 
+.popover-content {
+	background-color: #343637;
+	color: #FFFFFF;
+}

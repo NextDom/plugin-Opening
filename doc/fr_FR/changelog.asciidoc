@@ -1,0 +1,15 @@
+:imagesdir: ../images
+:icons:
+
+== Changelog
+
+Version 1.0
+
+- Création du plugin
+
+TODO :
+
+- rien
+
+=== Retour
+link:index.asciidoc[]

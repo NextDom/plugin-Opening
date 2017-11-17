@@ -1,0 +1,180 @@
+<div class="eqLogic eqLogic-widget allowResize allowReorderCmd Opening" data-eqLogic_id="#id#" data-eqLogic_uid="#uid#" data-version="#version#" style="border:#border#;border-radius:#border-radius#;background-color: #background-color#;color: #color#;width: #width#;height: #height#;#style#" data-category="#category#">
+	<div class="eqOpening" title="#valeurduValueString# #windowGValueDate#, #collecteeleValueString# #windowGCollectDate#">
+		<link rel="stylesheet" type="text/css" href="plugins/Opening/core/template/dashboard/css/style.css" />
+		<link rel="stylesheet" type="text/css" href="plugins/Opening/desktop/css/OpeningLayer.css" />
+		<center class="widget-name">
+			<a href="#eqLink#" style="font-size : 1.5em;#hideEqLogicName#">#name_display# <span style="font-size: 0.85em;">#object_name#</span></a>
+		</center>
+		<span class="statusCmd" style="position : absolute;left : 5px;bottom : 0px; width : 30px;z-index: 1030;"></span>
+		<center>
+			<div class="OpeningRotationWrp">
+				<div class="OpeningLayerWrp" style="margin-top:10px;">
+					<div class="temperatureWrp" style="display:flex;justify-content:#justifyTemperature#;display:-webkit-flex;-webkit-justify-content:#justifyTemperature#;margin-bottom:#temperaturesMarge#px;">
+						<span class="label label-default temperatureIntText" title="#valeurduValueString# #temperatureIntValueDate#, #collecteeleValueString# #temperatureIntCollectDate#">#temperatureIntValueString#</span>
+						<span class="label label-default temperatureExtText" title="#valeurduValueString# #temperatureExtValueDate#, #collecteeleValueString# #temperatureExtCollectDate#">#temperatureExtValueString#</span>
+					</div>
+					<div class="OpeningWrp family#familyModel#" style="width:#windowSize#px;height:#windowSize#px;">
+						<div class="OpeningWrp1" style="margin-top:#globalMarge#px;margin-bottom:#globalMarge#px;margin-left:#globalMarge#px;margin-right:#globalMarge#px;">
+							<div class="layer back bg"><img src="#backModel#"/></div>
+							<div class="layer weather bg" title="#weatherValue# (#weatherTrust#)"><img src="#weatherModel#"/></div>
+							<div class="layer store bg"><img style="#storePercentText#;" src="#storeModel#"/></div>
+							<div class="layer window"><img src="#windowModel#"/></div>
+						</div>
+						<div class="OpeningWrp2">
+							<div class="layer motion"><img class="positioned #motionPosition#" style="height: #motionSize#; width: #motionSize#;" src="#motionModel#"/></div>
+							<div class="layer batt"><img class="positioned #batteryPosition#" style="height: #batterySize#; width: #batterySize#;" src="#batterytModel#"/></div>
+							<div class="layer alarm"><img class="positioned #alarmPosition#" style="height: #alarmSize#; width: #alarmSize#;" src="#alarmModel#"/></div>
+							<div class="layer lock lockG"><img class="positioned #lockGPosition#" style="height: #lockSize#; width: #lockSize#;" src="#lockGModel#"/></div>
+							<div class="layer lock lockD"><img class="positioned #lockDPosition#" style="height: #lockSize#; width: #lockSize#;" src="#lockDModel#"/></div>
+						</div>
+					</div>
+					<div class="temperature2Wrp" style="display:flex;justify-content:#justifyTemperature#;display:-webkit-flex;-webkit-justify-content:#justifyTemperature#;margin-top:#temperaturesMarge#px;">
+						<span class="label label-default temperatureIntText" title="#valeurduValueString# #temperatureIntValueDate#, #collecteeleValueString# #temperatureIntCollectDate#">#temperatureIntValueString#</span>
+						<span class="label label-default temperatureExtText" title="#valeurduValueString# #temperatureExtValueDate#, #collecteeleValueString# #temperatureExtCollectDate#">#temperatureExtValueString#</span>
+					</div>
+				</div>
+			</div>
+			<div class="OpeningStateWrp" style="margin-top:#statesMarge#px;">
+				<span class="windowTime" style="display:none;" title="#valeurduValueString# #windowGValueDate#, #collecteeleValueString# #windowGCollectDate#"><span class="label label-default"><span class="windowTimeText">#windowValueString#</span><span class="windowTimeTime">#depuisValueString#<span></span></span></span><br></span>
+				<span class="storeTime" style="display:none;" title="#valeurduValueString# #storeValueDate#, #collecteeleValueString# #storeCollectDate#"><span class="label label-default"><span class="storeTimeText">#storeValueString#</span><span class="storeTimeTime">#depuisValueString#<span></span></span></span><br></span>
+				<span class="batteryTime" style="display:none;" title="#valeurduValueString# #batteryValueDate#, #collecteeleValueString# #batteryCollectDate#"><span class="label label-default"><span class="batteryTimeText">#batteryValueString#</span><span class="batteryTimeTime">#depuisValueString#<span></span></span></span><br></span>
+				<span class="motionTime" style="display:none;" title="#valeurduValueString# #motionValueDate#, #collecteeleValueString# #motionCollectDate#"><span class="label label-default"><span class="motionTimeText">#motionValueString#</span><span class="motionTimeTime">#depuisValueString#<span></span></span></span><br></span>
+				<span class="lockTime" style="display:none;" title="#valeurduValueString# #lockValueDate#, #collecteeleValueString# #lockCollectDate#"><span class="label label-default"><span class="lockTimeText">#lockValueString#</span><span class="lockTimeTime">#depuisValueString#<span></span></span></span><br></span>
+				<span class="alarmTime" style="display:none;" title="#valeurduValueString# #alarmValueDate#, #collecteeleValueString# #alarmCollectDate#"><span class="label label-default"><span class="alarmTimeText">#alarmValueString#</span><span class="alarmTimeTime">#depuisValueString#<span></span></span></span><br></span>
+				<span class="weatherTime" style="display:none;" title="#valeurduValueString# #weatherValueDate#, #collecteeleValueString# #weatherCollectDate#"><span class="label label-default"><span class="weatherTimeText">#weatherValueString#</span><span class="weatherTimeTime">#depuisValueString#<span></span></span></span><br></span>
+				<div class="sectionCmd"></div>
+			</div>
+			<div class="OpeningCmdWrp" style="margin-top:#cmdMarge#px;">
+				<center>
+					#cmd#
+				</center>
+			</div>
+		</center>
+		<script>
+			var $eqLogic =$('.eqLogic[data-eqLogic_uid=#uid#]');
+	
+			
+			// Gestion affichage window
+			if ('#windowShowState#' == '1')
+			{
+				var $el = $eqLogic.find('.windowTime').show();
+				jeedom.cmd.displayDuration('#windowValueDate#', $el.find('span.windowTimeTime>span'));
+				$el.find('span.windowTimeText').toggle('#windowShowState#' == '1');
+				$el.find('span.windowTimeTime').toggle('#windowShowStateDuration#' == '1');
+			}
+			
+			// Gestion affichage store
+			if ('#storeActiv#' == '0')
+			{
+				$eqLogic.find('.store.layer').hide();
+			}
+			if ('#storeShowStateDuration#' == '1' && '#storeActiv#' == '1')
+			{
+				var $el = $eqLogic.find('.storeTime').show();
+				jeedom.cmd.displayDuration('#storeValueDate#', $el.find('span.storeTimeTime>span'));
+				$el.find('span.storeTimeText').toggle('#storeShowState#' == '1');
+				$el.find('span.storeTimeTime').toggle('#storeShowStateDuration#' == '1');
+			}
+			
+			// Gestion affichage batterie
+			if ('#batteryActiv#' == '0')
+			{
+				$eqLogic.find('.batt.layer').hide();
+			}
+			if ('#batteryShowState#' == '1' && '#batteryActiv#' == '1')
+			{
+				var $el = $eqLogic.find('.batteryTime').show();
+				jeedom.cmd.displayDuration('#batteryValueDate#', $el.find('span.batteryTimeTime>span'));
+				$el.find('span.batteryTimeText').toggle('#batteryShowState#' == '1');
+				$el.find('span.batteryTimeTime').toggle('#batteryShowStateDuration#' == '1');
+			}
+			
+			// Gestion affichage motion
+			if ('#motionActiv#' == '0')
+			{
+				$eqLogic.find('.motion.layer').hide();
+			}
+			if ('#motionShowState#' == '1' && '#motionActiv#' == '1')
+			{
+				var $el = $eqLogic.find('.motionTime').show();
+				jeedom.cmd.displayDuration('#motionValueDate#', $el.find('span.motionTimeTime>span'));
+				$el.find('span.motionTimeText').toggle('#motionShowState#' == '1');
+				$el.find('span.motionTimeTime').toggle('#motionShowStateDuration#' == '1');
+			}
+			
+			// Gestion affichage alarm
+			if ('#alarmActiv#' == '0')
+			{
+				$eqLogic.find('.alarm.layer').hide();
+			}
+			if ('#alarmShowState#' == '1' && '#alarmActiv#' == '1')
+			{
+				var $el = $eqLogic.find('.alarmTime').show();
+				jeedom.cmd.displayDuration('#alarmValueDate#', $el.find('span.alarmTimeTime>span'));
+				$el.find('span.alarmTimeText').toggle('#alarmShowState#' == '1');
+				$el.find('span.alarmTimeTime').toggle('#alarmShowStateDuration#' == '1');
+			}
+			
+			// Gestion affichage lock
+			if ('#lockActiv#' == '0')
+			{
+				$eqLogic.find('.lock.layer').hide();
+			}
+			if ('#lockShowState#' == '1' && '#lockActiv#' == '1')
+			{
+				var $el = $eqLogic.find('.lockTime').show();
+				jeedom.cmd.displayDuration('#lockValueDate#', $el.find('span.lockTimeTime>span'));
+				$el.find('span.lockTimeText').toggle('#lockShowState#' == '1');
+				$el.find('span.lockTimeTime').toggle('#lockShowStateDuration#' == '1');
+			}
+			
+			// Gestion affichage weather
+			$eqLogic.find('.weather.layer').toggle('#weatherActiv#' == '0');
+			
+			if ('#weatherShowState#' == '1' && '#weatherActiv#' == '1' && '#weatherValueString#' != '')
+			{
+				var $el = $eqLogic.find('.weatherTime').show();
+				jeedom.cmd.displayDuration('#weatherValueDate#', $el.find('span.weatherTimeTime>span'));
+				$el.find('span.weatherTimeText').toggle('#weatherShowState#' == '1');
+				$el.find('span.weatherTimeTime').toggle('#weatherShowStateDuration#' == '1');
+			}
+			
+			// Gestion affichage Temperature
+			$eqLogic.find('.temperatureWrp').toggle('#temperatureActiv#' != '0' && '#topTemperature#' != '0')
+			$eqLogic.find('.temperature2Wrp').toggle('#temperatureActiv#' != '0' && '#topTemperature#' == '0')
+			$eqLogic.find('.temperatureIntText').toggle('#temperatureIntValue#' != '' && '#temperatureIntValue#' != '""')
+			$eqLogic.find('.temperatureExtText').toggle('#temperatureExtValue#' != '' && '#temperatureExtValue#' != '""')
+			
+			// Gestion mirroir image
+			if ('#windowInvertPosition#' == '1')
+			{
+				$eqLogic.find('.window.layer').css('transform','scaleX(-1)');
+				$eqLogic.find('.store.layer').css('transform','scaleX(-1)');
+			}
+
+			// Rotation
+			var $OpeningRotationWrp = $eqLogic.find('.OpeningRotationWrp');
+			$OpeningRotationWrp.css('transform', 'rotate(#windowRotate#deg)');
+			$OpeningRotationWrp.css('-webkit-transform', 'rotate(#windowRotate#deg)');
+			$OpeningRotationWrp.css('-moz-transform', 'rotate(#windowRotate#deg)');
+			$OpeningRotationWrp.css('-ms-transform', 'rotate(#windowRotate#deg)');
+			$OpeningRotationWrp.css('-o-transform', 'rotate(#windowRotate#deg)');
+			if ('#RotateStates#' == '1')
+			{
+				$OpeningRotationWrp.append($eqLogic.find('.OpeningStateWrp'));
+			}
+
+			if ('#RotateCmd#' == '1')
+			{
+				$OpeningRotationWrp.append($eqLogic.find('.OpeningCmdWrp'));
+			}
+			
+			var $OpeningWrp = $eqLogic.find('.OpeningWrp');
+			$OpeningWrp.css('transform', 'perspective(#windowPerscpective#px) rotateX(#windowRotateX#deg) rotateY(#windowRotateY#deg) rotateZ(#windowRotateZ#deg) translateY(#windowTranslateY#px)');
+			$OpeningWrp.css('-webkit-transform', 'perspective(#windowPerscpective#px) rotateX(#windowRotateX#deg) rotateY(#windowRotateY#deg) rotateZ(#windowRotateZ#deg) translateY(#windowTranslateY#px)');
+			$OpeningWrp.css('-moz-transform', 'perspective(#windowPerscpective#px) rotateX(#windowRotateX#deg) rotateY(#windowRotateY#deg) rotateZ(#windowRotateZ#deg) translateY(#windowTranslateY#px)');
+			$OpeningWrp.css('-ms-transform', 'perspective(#windowPerscpective#px) rotateX(#windowRotateX#deg) rotateY(#windowRotateY#deg) rotateZ(#windowRotateZ#deg) translateY(#windowTranslateY#px)');
+			$OpeningWrp.css('-o-transform', 'perspective(#windowPerscpective#px) rotateX(#windowRotateX#deg) rotateY(#windowRotateY#deg) rotateZ(#windowRotateZ#deg) translateY(#windowTranslateY#px)');
+		</script>
+	</div>
+</div>

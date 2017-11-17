@@ -1,0 +1,151 @@
+Config
+--------------------------------------------------------------------------------------------
+Priotité 1
+[X]- Titre pour parametre generaux (famille ...)
+[X]- Ajout parametre size
+[X]- Modifier composant liste famille avec image du premier model de chaque famille
+[X]- Seconde previsu (voir 3,4) avec des etats differents
+[X]- ajouter un mini/maxi sur info etat ouvrant pour par exemple mettre 0-100 pour l'ouverture d'une porte de garage
+[X]- Corriger overlay 
+[X]- Mettre option d'activation, si pas activer mettre info bulle par defaut de jeedom
+[X]- Corriger ordre alphabetique des listes 1,10,11,2,3 -> 1,2,3,10,11
+[X]- Pouvoir reselection l'image NOTHING dans un liste
+[X]- Afficher l'image ERROR si rien de choisi ou erreur
+[X]- Ajouter commande UP/DOWN/STOP 
+[X]- Ajouter un layer alarme activée
+[X]- Dans 2 autres previsu afficher lock puis alarm
+[X]- Bug quand on choisit store "modele defaut", ya l'image modele defaut qui se met dans previsu -> aucune images
+[X]- dans durée de l'etat mettre en espace avant : (tu aimes pas la class a l'americaine ? :))
+[X]- Gerer dans JS, le remplcement marges 0 en % depuis variables deja creer batterymarges, lockmarges, alarmmarges, motionmarges
+[X]- Accent grave sur modèle partout
+[X]- Proposer modeles volet de la famille 0 pour les famille 1,2,3,4
+[X]- Second layer lock (le premier deviens lock droite ou defaut, le second lock gauche)
+[X]- Mettre les case a cocher à la ligne a chaque fois pour question d'ergonomie
+[X]- Dans liste des modele ne mettre que le numero comme pour les back
+[X]- Dans afficher durée de l'etat, sur le widget ca ecrit "Fenetre {{ouvert}}", donc le fenetre faudrait l'enlever car ca peut etre une porte ou un frigo
+[X]- Probleme avec les "traduction" {{xxx}} sur durée de l'etat et overlay, j'ai cru lire que si tu avais tout bien integré, il fallait envoyer le plugin en beta sur market pour les trad soit envoyées à transifex et seulement apres les trad marchait non ?
+[X]- Layer alarm ne marche pas
+[X]- Augementer taille de l'overlay pour qu'il recouvre tout le widget
+[X]- Option pour mettre texte duree de l'etat en MAJUSCULE
+[X]- Option complémentaire à duree d'etat, possibilité de ne pas afficher la duree mais juste l'etat
+[X]- Marges portes pas bonne
+[X]- Supprimer stores famille 5 (fusion)
+[X]- Ajout option durée etat des lock, bat, motion, alarm
+[X]- Ajouter un espace vertical entre chaque previsu
+[X]- Sur page de gestion des equipement créer, mettre previsu de l'equipement a la place de l'icone plugin - Impossible on a pas les valeurs de l'equipement a ce niveau - le plugin Xiaomi home par exemple affiche l'image de l'equipement choisi, par moyen pour nous de mettre au moins le modele ou la famille ?
+[X]- Gerer cas si image quelquonque inexistante, alors mettre image vide
+[X]- Gerer cas si etat window (gauche + droite) > 3 et PAS modele special, alors etat = 3
+[X]- Gerer cas si etat lock, motion > 1, alors etat=0
+[X]- Gerer cas si etat alarm > 2, alors etat=0 (pas reussi :()
+[X]- Marges porte de garage pas bonnes en haut (j'essai de te faire des screenshot demain)
+[X]- Centrer verticalement info dans l'overlay
+[X]- Si alarme etat = 0 et pas case a cocher on prend l'image State1, donc corriger pour image State0, actuellemeent tu affiche l'image AlarmState1.png pour state=0 et state=1 de l'equipement, il faut utiliser AlarmState0.png (ou rien si case a cocher)
+[X]- Pour l'alerte batterie ya t il moyen de recuperer par code la batterie d'un equipement (au lieu d'une info batterie que les gens serait obliger de creer) ? Si oui on pourrait surveiller tous les equipements saisie (ouvrant, lock, motion etc) et pk pas afficher le nom de l'equipement concerné - L'info battery est creer automatiquement par l'equipement qui en a une - 
+[X]- sur le widget en porte de garage avec un back ya une ligne blanche en bas alors que non en previsu - je le vois pas chez moi screenshot stp - pareil j'essai demain de faire un tour de tout les modele
+[X]- faire un mode expert, case a cocher créer
+[X]- Bug preview ne marche plus, que des cadres blanc (widget et liste equipement ok)
+[X]- Ajouter famille 8 triple battant
+[X]- Dans liste famille remplacer "5)" par "05" comme les autres listes
+[X]- Gerer cas si windowXState3 inexistant
+[X]- Gerer le feminin des mot ouvert/ouverte verrouillé/verrouillée suivant si famille 6 ou <>6, ptre ajouter le string "e" -> il faut faire attention avec les traductions ca complique pas mal on pourrait simplement mettre (e) ? ou trouver un synonyme feminin de portail :D (pas trouvé a par "fermeture")
+[X]- Gerer dans le calcul comme Lock=LockG+LockD si dans lockD aucun equipement n'est saisi - si j'ai bien compris, j'ai utiliser une  representation binaire de la combinaison des 2
+[X]- Bug de disparition des lock, bat etc : c'est si on met une valeur dans marges = trouvé j'ai ajouté dans JS fonctions marges mais il faudrait que cette marges s'applique on fonction de la position choisie 
+[X]- Si on desactive l'affichage de l'etat motion par exemple mais que l'on garde l'etat lock, on se retrouve avec un ligne vide, il faudrait la supprimer
+[X]- Gestion du layer weather ecrite suivant valeur string genre "Gel" "Couvert" mais ca marche pas : l'etat de l'equipement meteo pourrait etre "Gel", "COuvert" etc genre un message dans un virtuel, alors faut remplacer "Soleil" par cet etat dans l'image weather
+[X]- Le layer sur le widget ne recouvre pas totalement l'image + les etats - je l'ai mis dynamique sur le bas, a voir si ca rend bien ...
+[X]- Limiter la taille du preview à 128 - fait mais uniquement sur la config (css max-xxxx)
+[X]- Ajout de case a cocher activation section qui caches les parametres (ok), le layer preview (ok), le layer widget (nok ??)
+[X]- finir perceptive pour preview
+[X]- Prendre en compte les modeles speciaux (naming avec un X) 
+[X]- Traduction des "valeur du" et "collectée le" dans standard.html
+[X]- Finalisation modele speciaux :
+[X]- Ajouter icone jeedom point d'interrogation en fin de chaque ligne, icone cliquable : pop-up d'information du parametre concerné 
+[X]- Option pour appliquer la rotation 2D au etats textuel
+[X]- Ajouter parametre pourcentage images lock, bat, motion, alarm (100%=42x42)
+[X]- Dans les champs size et min max, mettre les vraies valeur par defaut plutot qu'un texte - je crosi pas que se soit possible, je met une valeur par default mais le moteur les remplace par vide - on pourrais ajouter alors un label qui affiche la taille par defaut ?
+[X]- Mettre une icone devant les titres section parametres
+[X]- Ajouter seconde info temperature pour afficher un interieur exterieur :)
+[X]- Ajouter equipement ouverture 2, ou plutot renommer le premier en equipement ouvrant gauche et le deuxieme en equipement ouvrant droite, dans le code : state = state gauche + (state droite x2). Je rajoute donc image ouvrant double (state 3), pour ouvrant gauche faire un miroir de state 1
+[X]- Modifier option "ouvrant gauche" en "miroir image" pour garder l'option pour les portes par exemple
+[X]- Decalage de quelques pixels des options sous le "activer" des section genre volet
+[X]- Ajouter un bouton dans la config generale pour effacer toutes les images et fichier puis reinstaller le plugin si bug comme moi avec velux special
+[X]- Dans preview si volet pas activé on a quand meme le volet pour model special seulement, on corrige ? (car autre modele il est bien caché)
+[X]- Mon modele 05 Store intégré s'est retrouvé à la fin de la liste donc pas trié normal ?
+[X]- Dans overlay informatif ne pas afficher les temperatures si aucun equipement saisie
+[X]- Ameliorer image baie vitrée (bas et haut quand ouvert avec volet)
+[X]- Bug rafraissement modele special au changement d'activation volet, j'ai crée l'event faudrait ecrire fonction rafraissement
+[X]- Faire captures d'écran pour market
+[X]- Bug apres etoffage des commandes, impossible d'executer une commande
+[X]- Bug les etats s'affichent meme si la section est desactivée
+[X]- Bug les durée d'etat s'affiche meme si la section est desactivé OU si l'affichage d'etat est coché
+[X]- Ajouter du log en mode debug pour pouvoir debugger si log debug coché en config
+[X]- Option intégrer boutons commandes à la rotation
+[X]- Bug Si pas d'equipement alarm/motion/lock saisie, alors l'image s'affiche, il faudrait la cacher cacher image ainsi que l'etat
+[ ]- Bug on ne peut pas choisir un equipement virtuel type curseur comme commande ET la valeur de la commande n'est pas prise en compte
+[X]- Si un seul equipement lock saisie alors vérrouillé partielleent = verrouillé completement
+[ ]- les infos en widget default(core) ne s'affiche pas sur le dashboard, par contre si on met widget en badget(core) par exemple ca marche tout comme si on coche appliquer rotation aux commandes
+[X]- Gerer batterie differement, demander un equipement et aller par fonction recuperer la valeur - jeedom 3 et/ou mis a jour plugin type xiaomihome donne des commandes batterie
+[X]- Gerer si pas de modele weather selectionner
+[ ]- Option positionnement layer bat, lock etc en dehors de l'image (Ebauche commencée en mettant marge sur ouvrant, ce qui fait sortie les lock bat etc..) voir OpeningWrp1 et OpeningWrp2
+[ ]- optimiser meteo pour chercher dans une phrase
+[ ]- Optimiser meteo pour chercher des double mots comme "pluie eparse"
+[X]- Parametre legende T° int / ext et/ou icone
+[X]- Option d'affichage des temperature en badget exterieur a l'image en haut (Ebauche commencée)
+[X]- Bug si pas equipement temperature (valeur =' ') le badget vide s'affiche
+[ ]- bug tooltip avec #lockCollectDate#, #temperatureCollectDate#
+[X]- Bug pour lock, l'état "partiellement verrouillé" n'apparait jamais 
+[ ]- L'option ne pas appliquer rotation 3D aux commande ne fonctionne pas
+[X]- Si valeur temperature = "" ou null > cacher l'info
+[X]- Option d'affichage temperature en bas
+[X]- Les lock ne s'affichent pas
+[ ]- Marges de l'ouvrant ne fait rien ??
+[X]- Marges pour les temperatures
+[X]- Correction perspective et rotations 3D s'appliquent qu'a l'ouvrant
+[X]- Ajout translateY pour compenser la position de l'ouvrant si perscpective
+[X]- Ajout option d'alignement des text temperature 
+[~]- Ajout prévisualisation etat 2 : Bug si choix ouvrant a 1seul battant : ajouter condition au if dans opening.js (closed2)
+[X]- Ajout info-bulles manquante
+
+Priorité 2 (version 1.1) 
+[ ]- Faire html version mobile
+[ ]- Bug marge sur lock, les marges ne s'applique pas correctement
+[ ]- Ajouter un calque d'alerte temperature (icone 0=vide 1=overtemp 2=undertemp), des options de niveau mini et maxi OU couleurs de fond des textbox
+[ ]- Ajouter un "equipement" qui serait une action a déclencher suivant les alarme motion, batterie, alarm=2, overtemp, undertemp (ex sortie ban si overtemp ext, couper chauffage si overtemp interieur, scenario si alarme)
+[ ]- Option pour choisir ordre d'affichage temperature/Image/Etats/Cmd
+[ ]- Ajouter info X et commande X (divers genre une lampe exterieure) avec activation qui ajoute un layer divers (images a créer avec 2 etat)
+[ ]- Gerer layer store exterieur avec si activé deplacement layer store devant fenetre
+[ ]- Redimensionnement tuile au changement de modele (pas corporate mais propre :))
+[ ]- Ajouter liste choix fournisseur meteo > gerer weather suivant celui choisit ou agrementer tableau synonyme
+[ ]- Option d'affichage % batterie en badget exterieur a l'image en haut
+[ ]- Option choix couleur fond overlay
+[ ]- Possibilité de choisir la police d'ecriture des etats
+[ ]- Possibilite de choisir le style d'ecriture des etats (gras, italique, couleur)
+[ ]- Possibilité de choisir la couleur des fonds des etats
+[ ]- Integrer option style d'affichage de l'overlay :
+	.overlay {position: absolute;top: 0;bottom: 0;left: 0;right: 0;width: 100%;height: 100%;opacity: 0;transition: .5s ease;}
+    .overlay1 {position: absolute;top: 0;bottom: 0;left: 0;right: 0;width: 100%;height: 100%;opacity: 0;transition: .5s ease;}
+    .overlay2 {position: absolute;bottom: 0;left: 0;right: 0;overflow: hidden;width: 100%;height: 0;transition: .5s ease;}
+    .overlay3 {position: absolute;bottom: 100%;left: 0;right: 0;overflow: hidden;width: 100%;height:0;transition: .5s ease;}
+    .overlay4 {position: absolute;bottom: 0;left: 0;right: 0;overflow: hidden;width: 0;height: 100%;transition: .5s ease;}
+    .overlay5 {position: absolute;bottom: 0;left: 100%;right: 0;overflow: hidden;width: 0;height: 100%;transition: .5s ease;}
+    .container:hover .overlay {opacity: 1;}
+    .container1:hover .overlay1 {opacity: 1;}
+    .container2:hover .overlay2 {height: 100%;}
+    .container3:hover .overlay3 {bottom: 0;height: 100%;}
+    .container4:hover .overlay4 {width: 100%;}
+    .container5:hover .overlay5 {width: 100%;left: 0;}
+
+Priorité 5 (version 2.0)
+[ ]- Checkbox simple mais jolie : http://bootsnipp.com/snippets/featured/checkboxradio-css-only ?? :)
+[ ]- Ajout parametre marges supplementaire
+[ ]- Afficher au dessus de l'image les temperatures et la batterie avec option actvation comme duree d'etat
+[ ]- Ajouter dans commande un bouton "Commandes volet par defaut" qui ajouter 3 commande up/stop/down avec icones
+[ ]- Ajouter slider consigne volet avec option activation et donc commande volet en valeur directe
+[ ]- Parametre de rotation (0 a 360°) des layer window, store, back (pour par exemple dans un design en perspective :)
+
+Si rajout averlay
+[ ]- l'overlay est trop large, quand on met une rotation 2D à 90 par exemple, l'overlay recouvre les commandes
+[ ]- Bug quand commandes intégrées dans la rotation, l'overlay est pardessus
+[ ]- Ajouter petite marge sous dernier etat textuel : l'overlay ne recouvre pas completement les etats textuels
+[ ]- A chaque update du plugin l'overlay apparait, le rendu est bof, pour un volet qui bouffe ca risque d'etre vraiment bizarre
+--------------------------------------------------------------------------------------------

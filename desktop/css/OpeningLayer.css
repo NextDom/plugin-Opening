@@ -1,0 +1,179 @@
+/*Preview*/
+
+.OpeningWrp {
+	display: block;
+	position:relative;
+	width:85px;
+	height:85px;
+	margin:auto;
+}
+
+.OpeningWrp .layer {
+	position:absolute;
+	width:auto;
+	height:auto;
+	top:0px;
+	right:0px;
+	bottom:0px;
+	left:0px;
+	overflow:hidden;
+}
+
+.OpeningWrp .layer img{
+	width:100%;
+	height:100%;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+
+/*Fenetre double, Fenetre carree, Porte large, Velux carré*/
+.OpeningWrp.family0 .layer.bg {
+	top:11%;
+	right:10%;
+	bottom:10%;
+	left:10%;
+}
+
+/*Fenetre simple verticale, Velux long*/
+.OpeningWrp.family1 .layer.bg {
+	top: 8%;
+	right: 31%;
+	bottom: 8%;
+	left: 31%;
+}
+
+/*Fenetre simple horizontale, Vasistas*/
+.OpeningWrp.family2 .layer.bg {
+	top: 29%;
+	right: 8%;
+	bottom: 29%;
+	left: 8%;
+}
+
+/*Fenetre double haute*/
+.OpeningWrp.family3 .layer.bg {
+	top: 8%;
+	right: 23%;
+	bottom: 8%;
+	left: 23%;
+}
+
+/*Porte simple*/
+.OpeningWrp.family4 .layer.bg {
+	top: 4%;
+	right: 23%;
+	bottom: 4%;
+	left: 23%;
+}
+
+/*Porte garage*/
+.OpeningWrp.family5 .layer.bg {
+	top: 10%;
+	right: 8%;
+	bottom: 12%;
+	left: 8%;
+}
+
+/*Portails*/
+.OpeningWrp.family6 .layer.bg {
+	top: 5%;
+	right: 9%;
+	bottom: 17%;
+	left: 10%;
+}
+
+/*Divers*/
+.OpeningWrp.family7 .layer.bg {
+	top: 12%;
+	right: 8%;
+	bottom: 12%;
+	left: 9%;
+}
+
+/*Fenetre triple*/
+.OpeningWrp.family8 .layer.bg {
+	top: 34%;
+	right: 8%;
+	bottom: 33%;
+	left: 9%;
+}
+
+/*Baies*/
+.OpeningWrp.family9 .layer.bg {
+	top:11%;
+	right:10%;
+	bottom:6%;
+	left:10%;
+}
+
+.OpeningWrp img.positioned {
+	width: auto;
+	height: auto;
+}
+
+.OpeningWrp img.positioned.TopLeft {
+	margin-top: 0;
+	margin-right: auto;
+	margin-bottom: auto;
+	margin-left: 0;
+}
+
+.OpeningWrp img.positioned.TopCenter {
+	margin-top: 0;
+	margin-right: auto;
+	margin-bottom: auto;
+	margin-left: auto;
+}
+
+.OpeningWrp img.positioned.TopRight {
+	margin-top: 0;
+	margin-right: 0;
+	margin-bottom: auto;
+	margin-left: auto;
+}
+
+.OpeningWrp img.positioned.CenterLeft {
+	margin-top: auto;
+	margin-right: auto;
+	margin-bottom: auto;
+	margin-left: 0;
+}
+
+.OpeningWrp img.positioned.CenterCenter {
+	margin-top: auto;
+	margin-right: auto;
+	margin-bottom: auto;
+	margin-left: auto;
+}
+
+.OpeningWrp img.positioned.CenterRight {
+	margin-top: auto;
+	margin-right: 0;
+	margin-bottom: auto;
+	margin-left: auto;
+}
+
+.OpeningWrp img.positioned.BottomLeft {
+	margin-top: auto;
+	margin-right: auto;
+	margin-bottom: 0;
+	margin-left: 0;
+}
+
+.OpeningWrp img.positioned.BottomCenter {
+	margin-top: auto;
+	margin-right: auto;
+	margin-bottom: 0;
+	margin-left: auto;
+}
+
+.OpeningWrp img.positioned.BottomRight {
+	margin-top: auto;
+	margin-right: 0;
+	margin-bottom: 0;
+	margin-left: auto;
+}

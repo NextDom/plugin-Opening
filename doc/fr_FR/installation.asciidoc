@@ -1,0 +1,11 @@
+:imagesdir: ../images
+:icons:
+
+== Installation du Plugin
+
+L'installation se fait comme une installation classique de plugin, aucune disposition particulière n'est a prendre.
+
+Pensez cependant à bien activer le plugin une fois l'installation terminée.
+
+=== Retour
+link:index.asciidoc[]
