@@ -9,4 +9,8 @@ Afficher une Ouvrant totalement personnalisable et dynamiquement lié à vos éq
 
 Grab it on the [Market page](https://www.jeedom.com/market/index.php?v=d&p=market&type=plugin&&name=Opening)
 
+### Documentation
+
+link:doc/fr_FR/index.asciidoc[]
+
 <img src="doc/images/Opening_screenshot10.png" align="center">
