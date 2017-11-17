@@ -11,6 +11,6 @@ Grab it on the [Market page](https://www.jeedom.com/market/index.php?v=d&p=marke
 
 ### Documentation
 
-Vous trouverez la documentation [ici](https://github.com/cyrilphoenix71/jeedom_Opening/blob/beta/doc/fr_FR/index.asciidoc)
+Vous trouverez la documentation [ici](https://github.com/cyrilphoenix71/jeedom_Opening/blob/stable/doc/fr_FR/index.asciidoc)
 
 <img src="doc/images/Opening_screenshot10.png" align="center">
