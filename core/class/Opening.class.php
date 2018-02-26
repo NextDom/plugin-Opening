@@ -73,34 +73,34 @@ class xplanet extends eqLogic
 
         if (!$this->getConfiguration('delay') == '') {
             if (!preg_match("#[0-9]$#", $this->getConfiguration('delay'))) {
-                throw new Exception(__('Le champs Délai ne peut contenir autre chose que des chiffres', __FILE__));
+                throw new \Exception(__('Le champs Délai ne peut contenir autre chose que des chiffres', __FILE__));
             }
         }
 
         // Si l'url' ne commence pas par /
         if ($this->getConfiguration('capturePath') !== '' && substr($this->getConfiguration('capturePath'), 0, 1) !== "/") {
-            throw new Exception(__('Le champs Emplacement des captures doit commencer par un /', __FILE__));
+            throw new \Exception(__('Le champs Emplacement des captures doit commencer par un /', __FILE__));
         }
         if ($this->getConfiguration('name') === '') {
-            throw new Exception(__('Le champs Nom ne peut être vide', __FILE__));
+            throw new \Exception(__('Le champs Nom ne peut être vide', __FILE__));
         }
         // Si la chaîne contient des caractères spéciaux
         if (!preg_match("#[a-zA-Z0-9_-]$#", $this->getConfiguration('name'))) {
-            throw new Exception(__('Le champs Nom ne peut contenir de caractères spéciaux', __FILE__));
+            throw new \Exception(__('Le champs Nom ne peut contenir de caractères spéciaux', __FILE__));
         }
         // Si la chaîne contient des caractères spéciaux
         if (preg_match("/\\s/", $this->getConfiguration('name'))) {
-            throw new Exception(__('Le champs Nom ne peut contenir d\'espaces', __FILE__));
+            throw new \Exception(__('Le champs Nom ne peut contenir d\'espaces', __FILE__));
         }
         if ($this->getConfiguration('size') == '') {
-            throw new Exception(__('Le champs Dimension ne peut être vide', __FILE__));
+            throw new \Exception(__('Le champs Dimension ne peut être vide', __FILE__));
         }
         // Si la chaîne contient des caractères spéciaux
         if (!preg_match($this->paternForPregMatch(), $this->getConfiguration('size'))) {
             if (!preg_match($this->paternForPregMatch(), $this->getConfiguration('size'))) {
                 if (!preg_match($this->paternForPregMatch(), $this->getConfiguration('size'))) {
                     if (!preg_match($this->paternForPregMatch(), $this->getConfiguration('size'))) {
-                        throw new Exception(__('Le champs Dimension doit être au format nombrexnombre (ex 500x500)', __FILE__));
+                        throw new \Exception(__('Le champs Dimension doit être au format nombrexnombre (ex 500x500)', __FILE__));
                     }
                 }
             }
