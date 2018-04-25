@@ -26,7 +26,7 @@ class Opening extends eqLogic
     {
         log::add('Opening', 'debug', __METHOD__ . ' Enter');
 
-        if (is_null($replaceName)) {
+        if ($replaceName === null) {
             $replaceName = $cmdName;
         }
         $replace['#' . $replaceName . 'ValueDate#']   = '';
