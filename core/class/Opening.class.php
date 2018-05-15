@@ -57,7 +57,7 @@ class Opening extends eqLogic
             return $img;
         }
         log::add('Opening', 'debug', __METHOD__ . ' Image not foud: ' . $img);
-        if (is_null($def)) {
+        if ( $def === null) {
             return 'plugins/Opening/core/template/dashboard/images/FFFFFF-0.png';
         }
         return $def;
@@ -68,7 +68,7 @@ class Opening extends eqLogic
         if (file_exists(__DIR__ . '/../../../../' . $img))
             return $img;
         log::add('Opening', 'debug', __METHOD__ . ' Image not foud: ' . $img);
-        if (is_null($def)) {
+        if ($def === null) {
             return $img2;
         }
         return $def;
