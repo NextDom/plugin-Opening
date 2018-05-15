@@ -124,7 +124,7 @@ $eqLogics = eqLogic::byType('Opening');
 							<legend><i class="icon fa fa-cog"></i>   {{Paramètres Généraux}}
 							<i class="icon fa fa-question-circle" style="margin-top:12px;margin-left:10px" data-toggle="popover" data-trigger="hover" data-animation=true data-delay=200 data-html=true 
 								title="{{Paramètres Généraux}}" 
-								data-content="{{Cette section sert à selectionner la famille de l'ouvrant afin de filtrer les modèles et options qui suivent}}.<br>
+								data-content="{{Cette section sert à sélectionner la famille de l'ouvrant afin de filtrer les modèles et options qui suivent}}.<br>
 								{{On vient aussi définir les options de géometrie de l'ouvrant}}."></i>
 							</legend>	
 							<div class="form-group">
@@ -253,7 +253,7 @@ $eqLogics = eqLogic::byType('Opening');
 								<span>{{px}}</span>
 								<i class="icon fa fa-question-circle" style="margin-top:12px;margin-left:10px" data-placement="right" data-toggle="popover" data-trigger="hover" data-animation=true data-delay=200 data-html=true 
 								title="{{Perspective 3D}}" 
-								data-content="{{Saisissez ici la valeur de la perspective l'ouvrant}}.<br>
+								data-content="{{Saisissez ici la valeur de la perspective de l'ouvrant}}.<br>
 								{{La valeur par défaut (ou si omise) est à}} 0.<br>
 								{{La valeur peut être négative}}.<br>
 								{{Une valeur standard est de}} 50.<br>
@@ -269,7 +269,7 @@ $eqLogics = eqLogic::byType('Opening');
 								<span>{{px}}</span>
 								<i class="icon fa fa-question-circle" style="margin-top:12px;margin-left:10px" data-placement="right" data-toggle="popover" data-trigger="hover" data-animation=true data-delay=200 data-html=true 
 								title="{{Compensation de Perspective en Y}}" 
-								data-content="{{Saisissez ici la compensation de perspective en Y l'ouvrant}}.<br>
+								data-content="{{Saisissez ici la compensation de perspective en Y de l'ouvrant}}.<br>
 								{{Elle sert à compenser verticalement de positionnement de l'ouvrant surtout en cas de perspective non nulle}}.<br>
 								{{La valeur par défaut (ou si omise) est à}} 0.<br>
 								{{La valeur peut être négative}}".></i>
@@ -338,7 +338,7 @@ $eqLogics = eqLogic::byType('Opening');
 								<i class="icon fa fa-question-circle" style="margin-top:12px" data-placement="left" data-toggle="popover" data-trigger="hover" data-animation=true data-delay=200 data-html=true 
 								title="{{Equipement Droite}}" 
 								data-content="{{Saisissez ici l'équipement ou le capteur associé à l'ouvrant droit}}.<br>
-								{{Vous pouvez saisir qu'un seul équipement, l'état final de l'ouvrant sera une combinaison des 2 : droite + 2*gauche}}.<br>
+								{{Vous pouvez ne saisir qu'un seul équipement, l'état final de l'ouvrant sera une combinaison des 2 : droite + 2*gauche}}.<br>
 								{{La valeur de l'état de chaque équipement devra être 0 ou 1}}.<br>
 								{{Vous avez la possibilité d'utiliser un seul équipement ayant déjà une combinaison d'état}}."></i>
 							</div>
@@ -355,7 +355,7 @@ $eqLogics = eqLogic::byType('Opening');
 								<i class="icon fa fa-question-circle" style="margin-top:12px" data-placement="left" data-toggle="popover" data-trigger="hover" data-animation=true data-delay=200 data-html=true 
 								title="{{Equipement Gauche}}" 
 								data-content="{{Saisissez ici l'équipement ou le capteur associé à l'ouvrant gauche}}.<br>
-								{{Vous pouvez saisir qu'un seul équipement, l'état final de l'ouvrant sera une combinaison des 2 :droite + 2*gauche}}.<br>
+								{{Vous pouvez ne saisir qu'un seul équipement, l'état final de l'ouvrant sera une combinaison des 2 :droite + 2*gauche}}.<br>
 								{{La valeur de l'état de chaque équipement devra être 0 ou 1}}.<br>
 								{{Vous avez la possibilité d'utiliser un seul équipement ayant déjà une combinaison d'état}}."></i>
 							</div>
@@ -365,7 +365,7 @@ $eqLogics = eqLogic::byType('Opening');
 									<span>{{Inversé l'état}}</span>
 									<i class="icon fa fa-question-circle" style="margin-top:12px;margin-left:10px" data-placement="left" data-toggle="popover" data-trigger="hover" data-animation=true data-delay=200 data-html=true 
 									title="{{Inversé l'état}}" 
-									data-content="{{En cochant cette case l'interprétation de l'état des équipements droite et gauche seront inversés}}.<br>
+									data-content="{{En cochant cette case, l'interprétation de l'état des équipements droite et gauche sera inversée}}.<br>
 									{{Par défaut 0 signifie fermé, 1 signifie ouvert}}.<br>
 									{{Coché, 0 signifie ouvert, 1 signifie fermé}}."></i>
 									<br><br>
@@ -373,19 +373,19 @@ $eqLogics = eqLogic::byType('Opening');
 									<span>{{Afficher l'état}}</span>
 									<i class="icon fa fa-question-circle" style="margin-top:12px;margin-left:10px" data-placement="left" data-toggle="popover" data-trigger="hover" data-animation=true data-delay=200 data-html=true 
 									title="{{Afficher l'état}}" 
-									data-content="{{En cochant cette case une information reprenant l'état de l'ouvrant francisé sera affichée}}."></i>
+									data-content="{{En cochant cette case, une information reprenant l'état de l'ouvrant francisé sera affichée}}."></i>
 									<br><br>
 									<input type="checkbox" class="eqLogicAttr" data-l1key="configuration"  data-l2key="windowshowstateduration">
 									<span>{{Afficher la durée de l'état}}</span>
 									<i class="icon fa fa-question-circle" style="margin-top:12px;margin-left:10px" data-placement="left" data-toggle="popover" data-trigger="hover" data-animation=true data-delay=200 data-html=true 
 									title="{{Afficher la durée de l'état}}" 
-									data-content="{{En cochant cette case l'information d'état francisée se voit completée par la durée depuis de dernier état}}."></i>
+									data-content="{{En cochant cette case, l'information d'état francisée se voit completée par la durée depuis le dernier état}}."></i>
 									<br><br>
 									<input type="checkbox" class="eqLogicAttr" data-l1key="configuration"  data-l2key="windowinvertposition">
 									<span>{{Miroir image}}</span>
 									<i class="icon fa fa-question-circle" style="margin-top:12px;margin-left:10px" data-placement="left" data-toggle="popover" data-trigger="hover" data-animation=true data-delay=200 data-html=true 
 									title="{{Miroir image}}" 
-									data-content="{{En cochant cette case l'image de l'ouvrant sera inversée façon miroir}}."></i>
+									data-content="{{En cochant cette case, l'image de l'ouvrant sera inversée façon miroir}}."></i>
 									<br>
 								</div>
 							</div>
@@ -396,7 +396,7 @@ $eqLogics = eqLogic::byType('Opening');
 							<legend><i class="icon jeedom-volet-ouvert"></i>   {{Volet}}
 								<i class="icon fa fa-question-circle" style="margin-top:12px;margin-left:10px" data-toggle="popover" data-trigger="hover" data-animation=true data-delay=200 data-html=true 
 								title="{{Volet}}" 
-								data-content="{{Cette section sert à afficher l'image d'un volet positionné proportionnelement à la valeur de l'état d'un équipement volet}}.<br>
+								data-content="{{Cette section sert à afficher l'image d'un volet positionné proportionnellement à la valeur de l'état d'un équipement volet}}.<br>
 								{{Dans le cas d'un modèle d'ouverture avec store intégré, le modèle store ne sera pas pris en compte mais l'état de l'équipement sera utilisé}}."></i>
 							</legend>
 							<div class="form-group">
@@ -405,7 +405,7 @@ $eqLogics = eqLogic::byType('Opening');
 									<span>{{Activer}}</span>
 									<i class="icon fa fa-exclamation-circle" style="margin-top:12px;margin-left:10px" data-placement="right" data-toggle="popover" data-trigger="hover" data-animation=true data-delay=200 data-html=true 
 									title="{{Activer}}" 
-									data-content="{{Attention vous devez aussi selectionner un modèle et un équipement pour que cela s'affiche réellement}}."></i>
+									data-content="{{Attention, vous devez aussi sélectionner un modèle et un équipement pour que cela s'affiche réellement}}."></i>
 									<br>
 								</div>
 							</div>
@@ -482,21 +482,21 @@ $eqLogics = eqLogic::byType('Opening');
 										<span>{{Inversé l'état}}</span>
 										<i class="icon fa fa-question-circle" style="margin-top:12px;margin-left:10px" data-placement="left" data-toggle="popover" data-trigger="hover" data-animation=true data-delay=200 data-html=true 
 										title="{{Inversé l'état}}" 
-										data-content="{{En cochant cette case l'échelle de l'état du volet sera inversée}}.<br>
-										{{Par défaut le mini à 0 signifie volet ouvert ou fermé a 0%, 99 signifie fermé à 100%}}.<br>
+										data-content="{{En cochant cette case, l'échelle de l'état du volet sera inversée}}.<br>
+										{{Par défaut, le mini à 0 signifie volet ouvert ou fermé à 0%, 99 signifie fermé à 100%}}.<br>
 										{{Coché, 0 signifie fermé ou ouvert à 0%, 99 signifie ouvert à 100%}}."></i>
 										<br><br>
 										<input type="checkbox" class="eqLogicAttr" data-l1key="configuration"  data-l2key="storeshowstate">
 										<span>{{Afficher l'état}}</span>
 										<i class="icon fa fa-question-circle" style="margin-top:12px;margin-left:10px" data-placement="left" data-toggle="popover" data-trigger="hover" data-animation=true data-delay=200 data-html=true 
 										title="{{Afficher l'état}}" 
-										data-content="{{En cochant cette case une information reprenant l'état du volet francisé sera affichée}}."></i>
+										data-content="{{En cochant cette case, une information reprenant l'état du volet francisé sera affichée}}."></i>
 										<br><br>
 										<input type="checkbox" class="eqLogicAttr" data-l1key="configuration"  data-l2key="storeshowstateduration">
 										<span>{{Afficher la durée de l'état}}</span>
 										<i class="icon fa fa-question-circle" style="margin-top:12px;margin-left:10px" data-placement="left" data-toggle="popover" data-trigger="hover" data-animation=true data-delay=200 data-html=true 
 										title="{{Afficher la durée de l'état}}" 
-										data-content="{{En cochant cette case l'information d'état francisée se voit completée par la durée depuis de dernier état}}."></i>
+										data-content="{{En cochant cette case, l'information d'état francisée se voit complétée par la durée depuis le dernier état}}."></i>
 										<br>
 									</div>
 								</div>
@@ -516,7 +516,7 @@ $eqLogics = eqLogic::byType('Opening');
 									<span>{{Activer}}</span>
 									<i class="icon fa fa-exclamation-circle" style="margin-top:12px;margin-left:10px" data-placement="right" data-toggle="popover" data-trigger="hover" data-animation=true data-delay=200 data-html=true 
 									title="{{Activer}}" 
-									data-content="{{Attention vous devez aussi selectionner un modèle et un équipement pour que cela s'affiche réellement}}."></i>
+									data-content="{{Attention, vous devez aussi sélectionner un modèle et un équipement pour que cela s'affiche réellement}}."></i>
 									<br>
 								</div>
 							</div>
@@ -556,7 +556,7 @@ $eqLogics = eqLogic::byType('Opening');
 									</div>
 									<i class="icon fa fa-question-circle" style="margin-top:12px" data-placement="left" data-toggle="popover" data-trigger="hover" data-animation=true data-delay=200 data-html=true 
 									title="{{Equipement}}" 
-									data-content="{{Saisissez ici l'équipement ou le capteur dont vous voulez surveillez la batterie}}."></i>
+									data-content="{{Saisissez ici l'équipement ou le capteur dont vous voulez surveiller la batterie}}."></i>
 								</div>
 								<div class="form-group">
 									<label class="col-sm-3 control-label"  style="margin-top:10px">{{Positionnement}}</label>
@@ -617,7 +617,7 @@ $eqLogics = eqLogic::byType('Opening');
 									title="{{Taille}}" 
 									data-content="{{Saisissez ici la taille en pixel de l'icône batterie}}.<br>
 									{{La valeur par défaut (ou si omise) est à}} 42 pixels.<br>
-									{{Attention une pixelisation sera perceptible si la valeur saisie est supérieure}} 42 pixels."></i>
+									{{Attention, une pixelisation sera perceptible si la valeur saisie est supérieure à}} 42 pixels."></i>
 								</div>
 								<div class="form-group modeadvancedVisible">
 									<label class="col-sm-3 control-label">{{Marges}}</label>
@@ -639,13 +639,13 @@ $eqLogics = eqLogic::byType('Opening');
 										<span>{{Afficher l'état}}</span>
 										<i class="icon fa fa-question-circle" style="margin-top:12px;margin-left:10px" data-placement="left" data-toggle="popover" data-trigger="hover" data-animation=true data-delay=200 data-html=true 
 										title="{{Afficher l'état}}" 
-										data-content="{{En cochant cette case une information reprenant l'état la batterie francisé sera affichée}}."></i>
+										data-content="{{En cochant cette case, une information reprenant l'état de la batterie francisé sera affichée}}."></i>
 										<br><br>
 										<input type="checkbox" class="eqLogicAttr" data-l1key="configuration"  data-l2key="batteryshowstateduration">
 										<span>{{Afficher la durée de l'état}}</span>
 										<i class="icon fa fa-question-circle" style="margin-top:12px;margin-left:10px" data-placement="left" data-toggle="popover" data-trigger="hover" data-animation=true data-delay=200 data-html=true 
 										title="{{Afficher la durée de l'état}}" 
-										data-content="{{En cochant cette case l'information d'état francisée se voit completée par la durée depuis de dernier état}}."></i>
+										data-content="{{En cochant cette case, l'information d'état francisée se voit complétée par la durée depuis le dernier état}}."></i>
 										<br>
 									</div>
 								</div>
@@ -665,7 +665,7 @@ $eqLogics = eqLogic::byType('Opening');
 									<span>{{Activer}}</span>
 									<i class="icon fa fa-exclamation-circle" style="margin-top:12px;margin-left:10px" data-placement="right" data-toggle="popover" data-trigger="hover" data-animation=true data-delay=200 data-html=true 
 									title="{{Activer}}" 
-									data-content="{{Attention vous devez aussi selectionner un modèle et un équipement pour que cela s'affiche réellement}}."></i>
+									data-content="{{Attention, vous devez aussi sélectionner un modèle et un équipement pour que cela s'affiche réellement}}."></i>
 									<br>
 								</div>
 							</div>
@@ -706,7 +706,7 @@ $eqLogics = eqLogic::byType('Opening');
 									<i class="icon fa fa-question-circle" style="margin-top:12px" data-placement="left" data-toggle="popover" data-trigger="hover" data-animation=true data-delay=200 data-html=true 
 									title="{{Equipement}}" 
 									data-content="{{Saisissez ici l'équipement qui déclenchera des alertes de présence ou de mouvement}}.<br>
-									{{Les valeurs prise en compte sont 0 pour pas de détection et donc icône cachée, toute autre valeur pour détection}}."></i>
+									{{Les valeurs prises en compte sont 0 pour pas de détection et donc icône cachée, toute autre valeur pour détection}}."></i>
 								</div>
 								<div class="form-group">
 									<label class="col-sm-3 control-label" style="margin-top:10px">{{Positionnement}}</label>
@@ -754,7 +754,7 @@ $eqLogics = eqLogic::byType('Opening');
 									title="{{Taille}}" 
 									data-content="{{Saisissez ici la taille en pixel de l'icône motion}}.<br>
 									{{La valeur par défaut (ou si omise) est à}} 42 pixels.<br>
-									{{Attention une pixelisation sera perceptible si la valeur saisie est supérieure}} 42 pixels."></i>
+									{{Attention, une pixelisation sera perceptible si la valeur saisie est supérieure à}} 42 pixels."></i>
 								</div>
 								<div class="form-group modeadvancedVisible">
 									<label class="col-sm-3 control-label">{{Marges}}</label>
@@ -776,13 +776,13 @@ $eqLogics = eqLogic::byType('Opening');
 										<span>{{Afficher l'état}}</span>
 										<i class="icon fa fa-question-circle" style="margin-top:12px;margin-left:10px" data-placement="left" data-toggle="popover" data-trigger="hover" data-animation=true data-delay=200 data-html=true 
 										title="{{Afficher l'état}}" 
-										data-content="{{En cochant cette case une information reprenant l'état du motion francisé sera affichée}}."></i>
+										data-content="{{En cochant cette case, une information reprenant l'état du motion francisé sera affichée}}."></i>
 										<br><br>
 										<input type="checkbox" class="eqLogicAttr" data-l1key="configuration"  data-l2key="motionshowstateduration">
 										<span>{{Afficher la durée de l'état}}</span>
 										<i class="icon fa fa-question-circle" style="margin-top:12px;margin-left:10px" data-placement="left" data-toggle="popover" data-trigger="hover" data-animation=true data-delay=200 data-html=true 
 										title="{{Afficher la durée de l'état}}" 
-										data-content="{{En cochant cette case l'information d'état francisée se voit completée par la durée depuis de dernier état}}."></i>
+										data-content="{{En cochant cette case, l'information d'état francisée se voit complétée par la durée depuis le dernier état}}."></i>
 										<br>
 									</div>
 								</div>
@@ -802,7 +802,7 @@ $eqLogics = eqLogic::byType('Opening');
 									<span>{{Activer}}</span>
 									<i class="icon fa fa-exclamation-circle" style="margin-top:12px;margin-left:10px" data-placement="right" data-toggle="popover" data-trigger="hover" data-animation=true data-delay=200 data-html=true 
 									title="{{Activer}}" 
-									data-content="{{Attention vous devez aussi selectionner un modèle et un équipement pour que cela s'affiche réellement}}."></i>
+									data-content="{{Attention, vous devez aussi sélectionner un modèle et un équipement pour que cela s'affiche réellement}}."></i>
 									<br>
 								</div>
 							</div>
@@ -844,7 +844,7 @@ $eqLogics = eqLogic::byType('Opening');
 									<i class="icon fa fa-question-circle" style="margin-top:12px" data-placement="left" data-toggle="popover" data-trigger="hover" data-animation=true data-delay=200 data-html=true 
 									title="{{Equipement}}" 
 									data-content="{{Saisissez ici l'équipement associé au système d'alarme à monitorer}}.<br>
-									{{Les valeurs prise en compte sont 0 pour inactive, 1 pour active, 2 pour déclenchée}}"></i>
+									{{Les valeurs prises en compte sont 0 pour inactive, 1 pour active, 2 pour déclenchée}}"></i>
 								</div>
 								<div class="form-group">
 									<label class="col-sm-3 control-label" style="margin-top:10px">{{Positionnement}}</label>
@@ -892,7 +892,7 @@ $eqLogics = eqLogic::byType('Opening');
 									title="{{Taille}}" 
 									data-content="{{Saisissez ici la taille en pixel de l'icône alarme}}.<br>
 									{{La valeur par défaut (ou si omise) est à}} 42 pixels.<br>
-									{{Attention une pixelisation sera perceptible si la valeur saisie est supérieure}} 42 pixels."></i>
+									{{Attention une pixelisation sera perceptible si la valeur saisie est supérieure à}} 42 pixels."></i>
 								</div>
 								<div class="form-group modeadvancedVisible">
 									<label class="col-sm-3 control-label">{{Marges}}</label>
@@ -914,20 +914,20 @@ $eqLogics = eqLogic::byType('Opening');
 										<span>{{Afficher l'icône si alarme inactive}}</span>
 										<i class="icon fa fa-question-circle" style="margin-top:12px;margin-left:10px" data-placement="left" data-toggle="popover" data-trigger="hover" data-animation=true data-delay=200 data-html=true 
 										title="{{Afficher l'icône si alarme inactive}}" 
-										data-content="{{En cochant cette case l'icône de l'état alarme inactive sera affichée}}.<br>
+										data-content="{{En cochant cette case, l'icône de l'état alarme inactive sera affichée}}.<br>
 										{{Sinon l'icône sera cachée}}."></i>
 										<br><br>
 										<input type="checkbox" class="eqLogicAttr" data-l1key="configuration"  data-l2key="alarmshowstate">
 										<span>{{Afficher l'état}}</span>
 										<i class="icon fa fa-question-circle" style="margin-top:12px;margin-left:10px" data-placement="left" data-toggle="popover" data-trigger="hover" data-animation=true data-delay=200 data-html=true 
 										title="{{Afficher l'état}}" 
-										data-content="{{En cochant cette case une information reprenant l'état de l'alarme francisé sera affichée}}."></i>
+										data-content="{{En cochant cette case, une information reprenant l'état de l'alarme francisé sera affichée}}."></i>
 										<br><br>
 										<input type="checkbox" class="eqLogicAttr" data-l1key="configuration"  data-l2key="alarmshowstateduration">
 										<span>{{Afficher la durée de l'état}}</span>
 										<i class="icon fa fa-question-circle" style="margin-top:12px;margin-left:10px" data-placement="left" data-toggle="popover" data-trigger="hover" data-animation=true data-delay=200 data-html=true 
 										title="{{Afficher la durée de l'état}}" 
-										data-content="{{En cochant cette case l'information d'état francisée se voit completée par la durée depuis de dernier état}}."></i>
+										data-content="{{En cochant cette case, l'information d'état francisée se voit complétée par la durée depuis le dernier état}}."></i>
 										<br>
 									</div>
 								</div>
@@ -947,7 +947,7 @@ $eqLogics = eqLogic::byType('Opening');
 									<span>{{Activer}}</span>
 									<i class="icon fa fa-exclamation-circle" style="margin-top:12px;margin-left:10px" data-placement="right" data-toggle="popover" data-trigger="hover" data-animation=true data-delay=200 data-html=true 
 									title="{{Activer}}" 
-									data-content="{{Attention vous devez aussi selectionner un modèle et un équipement pour que cela s'affiche réellement}}."></i>
+									data-content="{{Attention, vous devez aussi sélectionner un modèle et un équipement pour que cela s'affiche réellement}}."></i>
 									<br>
 								</div>
 							</div>
@@ -989,7 +989,7 @@ $eqLogics = eqLogic::byType('Opening');
 									title="{{Equipement Droite}}" 
 									data-content="{{Saisissez ici l'équipement associé au verrouillage de l'ouvrant droit ou d'une serrure}}.<br>
 									{{Les valeurs prises en compte sont 0 pour déverrouillé et donc icône cachée, toute autre valeur pour verrouillé}}.<br>
-									{{Les équipement droite et gauche sont indépendant}}."></i>
+									{{Les équipements droite et gauche sont indépendants}}."></i>
 								</div>
 								<div class="form-group">
 									<label class="col-sm-3 control-label">{{Équipement Gauche}}</label>
@@ -1005,7 +1005,7 @@ $eqLogics = eqLogic::byType('Opening');
 									title="{{Equipement Gauche}}" 
 									data-content="{{Saisissez ici l'équipement associé au verrouillage de l'ouvrant gauche ou d'une autre serrure}}.<br>
 									{{Les valeurs prises en compte sont 0 pour déverrouillé et donc icône cachée, toute autre valeur pour verrouillé}}.<br>
-									{{Les équipement droite et gauche sont indépendant}}."></i>
+									{{Les équipements droite et gauche sont indépendants}}."></i>
 								</div>	
 								<div class="form-group">
 									<label class="col-sm-3 control-label" style="margin-top:10px">{{Positionnement Droite}}</label>
@@ -1087,7 +1087,7 @@ $eqLogics = eqLogic::byType('Opening');
 									title="{{Taille}}" 
 									data-content="{{Saisissez ici la taille en pixel des icônes verrouillage}}.<br>
 									{{La valeur par défaut (ou si omise) est à}} 42 pixels.<br>
-									{{Attention une pixelisation sera perceptible si la valeur saisie est supérieure}} 42 pixels."></i>
+									{{Attention une pixelisation sera perceptible si la valeur saisie est supérieure à}} 42 pixels."></i>
 								</div>
 								<div class="form-group modeadvancedVisible">
 									<label class="col-sm-3 control-label">{{Marges}}</label>
@@ -1109,13 +1109,13 @@ $eqLogics = eqLogic::byType('Opening');
 										<span>{{Afficher l'état}}</span>
 										<i class="icon fa fa-question-circle" style="margin-top:12px;margin-left:10px" data-placement="left" data-toggle="popover" data-trigger="hover" data-animation=true data-delay=200 data-html=true 
 										title="{{Afficher l'état}}" 
-										data-content="{{En cochant cette case une information reprenant et combinant les états des verrouillages francisé sera affichée}}."></i>
+										data-content="{{En cochant cette case, une information reprenant et combinant les états des verrouillages francisé sera affichée}}."></i>
 										<br><br>
 										<input type="checkbox" class="eqLogicAttr" data-l1key="configuration"  data-l2key="lockshowstateduration">
 										<span>{{Afficher la durée de l'état}}</span>
 										<i class="icon fa fa-question-circle" style="margin-top:12px;margin-left:10px" data-placement="left" data-toggle="popover" data-trigger="hover" data-animation=true data-delay=200 data-html=true 
 										title="{{Afficher la durée de l'état}}" 
-										data-content="{{En cochant cette case l'information d'état francisée se voit completée par la durée depuis de dernier état}}."></i>
+										data-content="{{En cochant cette case, l'information d'état francisée se voit complétée par la durée depuis le dernier état}}."></i>
 										<br>
 									</div>
 								</div>
@@ -1135,7 +1135,7 @@ $eqLogics = eqLogic::byType('Opening');
 									<span>{{Activer}}</span>
 									<i class="icon fa fa-exclamation-circle" style="margin-top:12px;margin-left:10px" data-placement="right" data-toggle="popover" data-trigger="hover" data-animation=true data-delay=200 data-html=true 
 									title="{{Activer}}" 
-									data-content="{{Attention vous devez aussi selectionner un équipement pour que cela s'affiche réellement}}."></i>
+									data-content="{{Attention, vous devez aussi sélectionner un équipement pour que cela s'affiche réellement}}."></i>
 									<br>
 								</div>
 							</div>
@@ -1196,7 +1196,7 @@ $eqLogics = eqLogic::byType('Opening');
 										<span>{{Afficher en MAJUSCULE les températures}}</span>
 										<i class="icon fa fa-question-circle" style="margin-top:12px;margin-left:10px" data-placement="left" data-toggle="popover" data-trigger="hover" data-animation=true data-delay=200 data-html=true 
 										title="{{Afficher en MAJUSCULE les températures}}" 
-										data-content="{{En cochant cette case les lettres des températures seront CAPITALISES, tout sera écrit en majuscule}}."></i>
+										data-content="{{En cochant cette case, les lettres des températures seront CAPITALISEES, tout sera écrit en majuscule}}."></i>
 										<br>
 									</div>
 								</div>
@@ -1206,7 +1206,7 @@ $eqLogics = eqLogic::byType('Opening');
 										<span>{{Afficher les températures en haut de l'ouvrant}}</span>
 										<i class="icon fa fa-question-circle" style="margin-top:12px;margin-left:10px" data-placement="left" data-toggle="popover" data-trigger="hover" data-animation=true data-delay=200 data-html=true 
 										title="{{Afficher les températures en haut de l'ouvrant}}" 
-										data-content="{{En cochant cette case les températures s'afficheront au-dessus de l'ouvrant, sinon elles seront juste en-dessous}}."></i>
+										data-content="{{En cochant cette case, les températures s'afficheront au-dessus de l'ouvrant, sinon elles seront juste en-dessous}}."></i>
 										<br>
 									</div>
 								</div>
@@ -1216,10 +1216,10 @@ $eqLogics = eqLogic::byType('Opening');
 										<span>{{Position des températures justifiées}}</span>
 										<i class="icon fa fa-question-circle" style="margin-top:12px;margin-left:10px" data-placement="left" data-toggle="popover" data-trigger="hover" data-animation=true data-delay=200 data-html=true 
 										title="{{Position des températures justifiées}}" 
-										data-content="{{En cochant cette case les températures seront horizontalement justifiées}}.<br>
+										data-content="{{En cochant cette case, les températures seront horizontalement justifiées}}.<br>
 										{{Il faut comprendre qu'un espace automatique autour de chacun sera ajusté et qu'elle ne seront pas au bord de l'ouvrant}}.<br>
 										{{Si une seule température est utilisée, elle sera centrée}}.<br>
-										{{En décochant les températures seront alignées à gauche et à droite de l'ouvrant, à gauche si une seule température est utilisée}}."></i>
+										{{En décochant, les températures seront alignées à gauche et à droite de l'ouvrant, à gauche si une seule température est utilisée}}."></i>
 										<br>
 									</div>
 								</div>
@@ -1231,7 +1231,7 @@ $eqLogics = eqLogic::byType('Opening');
 							<legend><i class="icon divers-umbrella2"></i>   {{Météo}}
 								<i class="icon fa fa-question-circle" style="margin-top:12px;margin-left:10px" data-toggle="popover" data-trigger="hover" data-animation=true data-delay=200 data-html=true 
 								title="{{Météo}}" 
-								data-content="{{Cette section à afficher une image ou une icône représentant les conditions météorologiques}}."></i>
+								data-content="{{Cette section sert à afficher une image ou une icône représentant les conditions météorologiques}}."></i>
 							</legend>	
 							<div class="form-group">
 								<div class="col-sm-offset-3 col-sm-6">
@@ -1239,7 +1239,7 @@ $eqLogics = eqLogic::byType('Opening');
 									<span>{{Activer}}</span>
 									<i class="icon fa fa-exclamation-circle" style="margin-top:12px;margin-left:10px" data-placement="right" data-toggle="popover" data-trigger="hover" data-animation=true data-delay=200 data-html=true 
 									title="{{Activer}}" 
-									data-content="{{Attention vous devez aussi selectionner un modèle et un équipement pour que cela s'affiche réellement}}."></i>
+									data-content="{{Attention, vous devez aussi sélectionner un modèle et un équipement pour que cela s'affiche réellement}}."></i>
 									<br>
 								</div>
 							</div>
@@ -1280,7 +1280,7 @@ $eqLogics = eqLogic::byType('Opening');
 									<i class="icon fa fa-question-circle" style="margin-top:12px" data-placement="left" data-toggle="popover" data-trigger="hover" data-animation=true data-delay=200 data-html=true 
 									title="{{Équipement météo}}" 
 									data-content="{{Saisissez ici l'équipement qui fournira une information de l'état de la météo (actuelle ou décalée)}}.<br>
-									{{Une recherche de mot clé sera effectuée dans cette information pour en déduire une image correspondante et suivant le modèle choisit}}."></i>
+									{{Une recherche de mot clé sera effectuée dans cette information pour en déduire une image correspondante et suivant le modèle choisi}}."></i>
 								</div>
 								<div class="form-group modeadvancedVisible">
 									<div class="col-sm-offset-3 col-sm-6">
@@ -1288,19 +1288,19 @@ $eqLogics = eqLogic::byType('Opening');
 										<span>{{Afficher les conditions}}</span>
 										<i class="icon fa fa-question-circle" style="margin-top:12px;margin-left:10px" data-placement="left" data-toggle="popover" data-trigger="hover" data-animation=true data-delay=200 data-html=true 
 										title="{{Afficher les conditions}}" 
-										data-content="{{En cochant cette case une information reprenant et combinant les états des conditions météorologique sera affiché}}."></i>
+										data-content="{{En cochant cette case, une information reprenant et combinant les états des conditions météorologique sera affichée}}."></i>
 										<br><br>
 										<input type="checkbox" class="eqLogicAttr" data-l1key="configuration"  data-l2key="weathershowstateduration">
 										<span>{{Afficher la durée des conditions}}</span>
 										<i class="icon fa fa-question-circle" style="margin-top:12px;margin-left:10px" data-placement="left" data-toggle="popover" data-trigger="hover" data-animation=true data-delay=200 data-html=true 
 										title="{{Afficher la durée des conditions}}" 
-										data-content="{{En cochant cette case l'information d'état se voit completée par la durée depuis de dernier état}}."></i>
+										data-content="{{En cochant cette case, l'information d'état se voit complétée par la durée depuis le dernier état}}."></i>
 										<br><br>
 										<input type="checkbox" class="eqLogicAttr" data-l1key="configuration"  data-l2key="upperstatesweather">
 										<span>{{Afficher en MAJUSCULE les conditions}}</span>
 										<i class="icon fa fa-question-circle" style="margin-top:12px;margin-left:10px" data-placement="left" data-toggle="popover" data-trigger="hover" data-animation=true data-delay=200 data-html=true 
 										title="{{Afficher en MAJUSCULE les conditions}}" 
-										data-content="{{En cochant cette case les lettres des conditions seront CAPITALISES, tout sera écrit en majuscule}}."></i>
+										data-content="{{En cochant cette case, les lettres des conditions seront CAPITALISEES, tout sera écrit en majuscule}}."></i>
 										<br>
 									</div>
 								</div>
@@ -1396,21 +1396,21 @@ $eqLogics = eqLogic::byType('Opening');
 									<span>{{Afficher en MAJUSCULE les états}}</span>
 									<i class="icon fa fa-question-circle" style="margin-top:12px;margin-left:10px" data-placement="left" data-toggle="popover" data-trigger="hover" data-animation=true data-delay=200 data-html=true 
 									title="{{Afficher en MAJUSCULE les états}}" 
-									data-content="{{En cochant cette case les lettres des états textuels seront CAPITALISES, tout sera écrit en majuscule}}."></i>
+									data-content="{{En cochant cette case, les lettres des états textuels seront CAPITALISEES, tout sera écrit en majuscule}}."></i>
 									<br><br>
 									<input type="checkbox" class="eqLogicAttr" data-l1key="configuration"  data-l2key="rotatestates">
 									<span>{{Appliquer la rotation 2D aux états}}</span>
 									<i class="icon fa fa-question-circle" style="margin-top:12px;margin-left:10px" data-placement="left" data-toggle="popover" data-trigger="hover" data-animation=true data-delay=200 data-html=true 
 									title="{{Appliquer la rotation 2D aux états}}" 
-									data-content="{{En cochant cette case la rotation 2D sera appliqué à tout l'ouvrant, les images ET les états textuels}}.<br>
-									{{Sinon la rotation sera seulement appliquée aux images, les états resteront eux horizontaux}}."></i>
+									data-content="{{En cochant cette case, la rotation 2D sera appliqué à tout l'ouvrant, les images ET les états textuels}}.<br>
+									{{Sinon, la rotation sera seulement appliquée aux images, les états resteront eux horizontaux}}."></i>
 									<br><br>
 									<input type="checkbox" class="eqLogicAttr" data-l1key="configuration"  data-l2key="rotatecmd">
 									<span>{{Appliquer la rotation 2D aux commandes}}</span>
 									<i class="icon fa fa-question-circle" style="margin-top:12px;margin-left:10px" data-placement="left" data-toggle="popover" data-trigger="hover" data-animation=true data-delay=200 data-html=true 
 									title="{{Appliquer la rotation 2D aux commandes}}" 
-									data-content="{{En cochant cette case la rotation 2D sera appliqué aussi aux commandes}}.<br>
-									{{Sinon la rotation sera seulement appliquée aux images, et éventuellement aux états}}."></i>
+									data-content="{{En cochant cette case, la rotation 2D sera appliquée aussi aux commandes}}.<br>
+									{{Sinon, la rotation sera seulement appliquée aux images, et éventuellement aux états}}."></i>
 									<br>
 								</div>
 							</div>
@@ -1437,7 +1437,7 @@ $eqLogics = eqLogic::byType('Opening');
 								title="{{Prévisualisation}}" 
 								data-content="{{Cette section sert à prévisualiser en temps réel vos réglages}}.<br>
 								{{Tous les éléments ne sont pas affichés pour ne pas surcharger le rendu}}.<br>
-								{{On retrouve également une multitudes d'états possible}}.<br>"></i>
+								{{On retrouve également une multitude d'états possibles}}.<br>"></i>
 							</legend>	
 							<div class="row">
 								<div class="col-sm-4 text-center">
