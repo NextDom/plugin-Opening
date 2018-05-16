@@ -1,6 +1,7 @@
 Config
 --------------------------------------------------------------------------------------------
-Priotité 1
+Fait
+--------------------------------------------------------------------------------------------
 [X]- Titre pour parametre generaux (famille ...)
 [X]- Ajout parametre size
 [X]- Modifier composant liste famille avec image du premier model de chaque famille
@@ -81,24 +82,16 @@ Priotité 1
 [X]- Ajouter du log en mode debug pour pouvoir debugger si log debug coché en config
 [X]- Option intégrer boutons commandes à la rotation
 [X]- Bug Si pas d'equipement alarm/motion/lock saisie, alors l'image s'affiche, il faudrait la cacher cacher image ainsi que l'etat
-[ ]- Bug on ne peut pas choisir un equipement virtuel type curseur comme commande ET la valeur de la commande n'est pas prise en compte
 [X]- Si un seul equipement lock saisie alors vérrouillé partielleent = verrouillé completement
-[ ]- les infos en widget default(core) ne s'affiche pas sur le dashboard, par contre si on met widget en badget(core) par exemple ca marche tout comme si on coche appliquer rotation aux commandes
 [X]- Gerer batterie differement, demander un equipement et aller par fonction recuperer la valeur - jeedom 3 et/ou mis a jour plugin type xiaomihome donne des commandes batterie
 [X]- Gerer si pas de modele weather selectionner
-[ ]- Option positionnement layer bat, lock etc en dehors de l'image (Ebauche commencée en mettant marge sur ouvrant, ce qui fait sortie les lock bat etc..) voir OpeningWrp1 et OpeningWrp2
-[ ]- optimiser meteo pour chercher dans une phrase
-[ ]- Optimiser meteo pour chercher des double mots comme "pluie eparse"
 [X]- Parametre legende T° int / ext et/ou icone
 [X]- Option d'affichage des temperature en badget exterieur a l'image en haut (Ebauche commencée)
 [X]- Bug si pas equipement temperature (valeur =' ') le badget vide s'affiche
-[ ]- bug tooltip avec #lockCollectDate#, #temperatureCollectDate#
 [X]- Bug pour lock, l'état "partiellement verrouillé" n'apparait jamais 
-[ ]- L'option ne pas appliquer rotation 3D aux commande ne fonctionne pas
 [X]- Si valeur temperature = "" ou null > cacher l'info
 [X]- Option d'affichage temperature en bas
 [X]- Les lock ne s'affichent pas
-[ ]- Marges de l'ouvrant ne fait rien ??
 [X]- Marges pour les temperatures
 [X]- Correction perspective et rotations 3D s'appliquent qu'a l'ouvrant
 [X]- Ajout translateY pour compenser la position de l'ouvrant si perscpective
@@ -106,7 +99,25 @@ Priotité 1
 [~]- Ajout prévisualisation etat 2 : Bug si choix ouvrant a 1seul battant : ajouter condition au if dans opening.js (closed2)
 [X]- Ajout info-bulles manquante
 
-Priorité 2 (version 1.1) 
+--------------------------------------------------------------------------------------------
+Priotité 1
+--------------------------------------------------------------------------------------------
+[ ]- Marges de l'ouvrant ne fait rien ??
+[ ]- Option positionnement layer bat, lock etc en dehors de l'image (Ebauche commencée en mettant marge sur ouvrant, ce qui fait sortie les lock bat etc..) voir OpeningWrp1 et OpeningWrp2
+[ ]- Bug on ne peut pas choisir un equipement virtuel type curseur comme commande ET la valeur de la commande n'est pas prise en compte
+[ ]- les infos en widget default(core) ne s'affiche pas sur le dashboard, par contre si on met widget en badget(core) par exemple ca marche tout comme si on coche appliquer rotation aux commandes
+[ ]- bug tooltip avec #lockCollectDate#, #temperatureCollectDate#
+[ ]- L'option ne pas appliquer rotation 3D aux commande ne fonctionne pas
+
+--------------------------------------------------------------------------------------------
+Priotité 2
+--------------------------------------------------------------------------------------------
+[ ]- optimiser meteo pour chercher dans une phrase
+[ ]- Optimiser meteo pour chercher des double mots comme "pluie eparse"
+
+--------------------------------------------------------------------------------------------
+Priorité 3 (version 1.1) 
+--------------------------------------------------------------------------------------------
 [ ]- Faire html version mobile
 [ ]- Bug marge sur lock, les marges ne s'applique pas correctement
 [ ]- Ajouter un calque d'alerte temperature (icone 0=vide 1=overtemp 2=undertemp), des options de niveau mini et maxi OU couleurs de fond des textbox
@@ -135,15 +146,18 @@ Priorité 2 (version 1.1)
     .container4:hover .overlay4 {width: 100%;}
     .container5:hover .overlay5 {width: 100%;left: 0;}
 
+--------------------------------------------------------------------------------------------
 Priorité 5 (version 2.0)
-[ ]- Checkbox simple mais jolie : http://bootsnipp.com/snippets/featured/checkboxradio-css-only ?? :)
+--------------------------------------------------------------------------------------------
 [ ]- Ajout parametre marges supplementaire
 [ ]- Afficher au dessus de l'image les temperatures et la batterie avec option actvation comme duree d'etat
 [ ]- Ajouter dans commande un bouton "Commandes volet par defaut" qui ajouter 3 commande up/stop/down avec icones
 [ ]- Ajouter slider consigne volet avec option activation et donc commande volet en valeur directe
 [ ]- Parametre de rotation (0 a 360°) des layer window, store, back (pour par exemple dans un design en perspective :)
 
+--------------------------------------------------------------------------------------------
 Si rajout averlay
+--------------------------------------------------------------------------------------------
 [ ]- l'overlay est trop large, quand on met une rotation 2D à 90 par exemple, l'overlay recouvre les commandes
 [ ]- Bug quand commandes intégrées dans la rotation, l'overlay est pardessus
 [ ]- Ajouter petite marge sous dernier etat textuel : l'overlay ne recouvre pas completement les etats textuels
