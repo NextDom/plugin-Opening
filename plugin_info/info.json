@@ -6,5 +6,9 @@
 	"licence" : "AGPL",
 	"author" : "Virux, CyrilPhoenix, Slobberbone",
 	"require" : "2.3",
-	"category" : "automatisation"
+	"category" : "automatisation",
+	"hasDependency" : 0,
+	"hasOwnDeamon" : 0,
+	"documentation" : "https://github.com/cyrilphoenix71/jeedom_Opening/blob/stable/doc/fr_FR/index.asciidoc",
+	"changelog" : "https://github.com/cyrilphoenix71/jeedom_Opening/blob/stable/doc/fr_FR/changelog.asciidoc"
 }
