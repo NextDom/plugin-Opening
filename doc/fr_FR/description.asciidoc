@@ -3,7 +3,7 @@
 
 == Description du Plugin
 
-Ce plugin sert à créer un Ouvrant graphique combinant plusieurs éléments physique en un widget :
+Ce plugin sert à créer un Ouvrant graphique combinant plusieurs éléments physiques en un widget :
 
 image:Opening_screenshot10.png[]
 
@@ -20,11 +20,11 @@ L'ouvrant est caractérisé par une famille :
 - Fenêtre triple (Largeur > Hauteur)
 - Baies (Largeur = Hauteur)
 
-Puis par une sérrie d'éléments activables :
+Puis par une série d'éléments activables :
 
 - Volet roulant
-- Detecteur de mouvement
-- Verrouilage gauche et/ou droit
+- Détecteur de mouvement
+- Verrouillage gauche et/ou droit
 - Alarme
 - Batterie
 - Météo
@@ -36,7 +36,7 @@ Enfin par toute une foulée d'options telles que :
 - Etats textuels
 etc..
 
-On peut configurer chaque element parmis une liste de modèles visualisable dans la galerie de la page de configuration du plugin :
+On peut configurer chaque élément parmi une liste de modèles visualisables dans la galerie de la page de configuration du plugin :
 
 image:Opening_screenshot1.png[]
 
