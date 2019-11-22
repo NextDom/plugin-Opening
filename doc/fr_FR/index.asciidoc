@@ -1,27 +1,20 @@
 :imagesdir: ../images
 :icons:
 
-== FlipClock
 image:Opening_icon.png[]
 
 {nbsp} +
 
-=== Description
-link:description.asciidoc[]
+=== link:description.asciidoc[Description]
 
 '''
-=== Installation
-link:installation.asciidoc[]
+=== link:installation.asciidoc[Installation]
 
 '''
-=== Configuration
-link:configuration.asciidoc[]
+=== link:configuration.asciidoc[Configuration]
 
 '''
-=== FAQ
-link:faq.asciidoc[]
+=== link:faq.asciidoc[FAQ]
 
 '''
-=== Changelog
-link:changelog.asciidoc[]
-
+=== link:changelog.asciidoc[Changelog]

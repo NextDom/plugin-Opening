@@ -9,6 +9,6 @@
 	"category" : "automatisation",
 	"hasDependency" : 0,
 	"hasOwnDeamon" : 0,
-	"documentation" : "https://github.com/cyrilphoenix71/jeedom_Opening/blob/master/doc/fr_FR/index.asciidoc",
-	"changelog" : "https://github.com/cyrilphoenix71/jeedom_Opening/blob/master/doc/fr_FR/changelog.asciidoc"
+	"documentation" : "https://github.com/NextDom/plugin-Opening/blob/master/doc/fr_FR/index.asciidoc",
+	"changelog" : "https://github.com/NextDom/plugin-Opening/blob/master/doc/fr_FR/changelog.asciidoc"
 }

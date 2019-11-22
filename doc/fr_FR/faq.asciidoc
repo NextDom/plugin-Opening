@@ -7,5 +7,4 @@ Comment avoir le fond transparent sur mon ouvrant ?
 
 - Via la configuration avancée de l'ouvrant.
 
-=== Retour
-link:index.asciidoc[]
+=== link:index.asciidoc[Retour]

@@ -11,5 +11,4 @@ TODO :
 
 - rien
 
-=== Retour
-link:index.asciidoc[]
+=== link:index.asciidoc[Retour]

@@ -29,7 +29,7 @@ Puis par une série d'éléments activables :
 - Batterie
 - Météo
 
-Enfin par toute une foulée d'options telles que : 
+Enfin par toute une foulée d'options telles que :
 
 - Fond d'écran
 - Perspective 3D
@@ -50,6 +50,4 @@ image:Opening_screenshot8.png[]
 
 image:Opening_screenshot9.png[]
 
-=== Retour
-link:index.asciidoc[]
-
+=== link:index.asciidoc[Retour]

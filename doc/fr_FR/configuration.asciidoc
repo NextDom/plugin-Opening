@@ -28,5 +28,4 @@ image:Opening_screenshot7.png[]
 
 Chaque paramètre est expliqué directement sur la page de configuration, survolez l'icône "?" pour avoir une popup explicative.
 
-=== Retour
-link:index.asciidoc[]
+=== link:index.asciidoc[Retour]

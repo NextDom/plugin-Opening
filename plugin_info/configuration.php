@@ -1,20 +1,4 @@
 <?php
-/* This file is part of Jeedom.
- *
- * Jeedom is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * Jeedom is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with Jeedom. If not, see <http://www.gnu.org/licenses/>.
- */
-
 /* This file is part of NextDom.
  *
  * NextDom is free software: you can redistribute it and/or modify
@@ -269,9 +253,7 @@ if (file_exists($dir) == false) {
             if (strpos($name, 'Store') !== false) {
                 echo "<div class='holder'>";
                 echo "    <div id='image-$name' class='image-lightbox'>";
-                //echo "        <span class='close'><a href='#'>X</a></span>";
                 echo "        <img src='$dir$file' alt='$name' title='$name'>";
-                //echo "        <a class='expand' href='#image-$name'></a>";
                 echo "    </div>";
                 echo "</div>";
             }
@@ -310,9 +292,7 @@ if (file_exists($dir) === false) {
             if (strpos($name, 'Back') !== false) {
                 echo "<div class='holder'>";
                 echo "    <div id='image-$name' class='image-lightbox'>";
-                //echo "        <span class='close'><a href='#'>X</a></span>";
                 echo "        <img src='$dir$file' alt='$name' title='$name'>";
-                //echo "        <a class='expand' href='#image-$name'></a>";
                 echo "    </div>";
                 echo "</div>";
             }
@@ -351,9 +331,7 @@ if (file_exists($dir) === false) {
                                 if (strpos($name, 'Alarm') !== false) {
                                     echo "<div class='holder little'>";
                                     echo "    <div id='image-$name' class='image-lightbox'>";
-                                    //echo "        <span class='close'><a href='#'>X</a></span>";
                                     echo "        <img src='$dir$file' alt='$name' title='$name'>";
-                                    //echo "        <a class='expand' href='#image-$name'></a>";
                                     echo "    </div>";
                                     echo "</div>";
                                 }
@@ -392,9 +370,7 @@ if (file_exists($dir) === false) {
                                 if (strpos($name, 'Bat') !== false) {
                                     echo "<div class='holder little'>";
                                     echo "    <div id='image-$name' class='image-lightbox'>";
-                                    //echo "        <span class='close'><a href='#'>X</a></span>";
                                     echo "        <img src='$dir$file' alt='$name' title='$name'>";
-                                    //echo "        <a class='expand' href='#image-$name'></a>";
                                     echo "    </div>";
                                     echo "</div>";
                                 }
@@ -433,9 +409,7 @@ if (file_exists($dir) === false) {
                                 if (strpos($name, 'Lock') !== false) {
                                     echo "<div class='holder little'>";
                                     echo "    <div id='image-$name' class='image-lightbox'>";
-                                    //echo "        <span class='close'><a href='#'>X</a></span>";
                                     echo "        <img src='$dir$file' alt='$name' title='$name'>";
-                                    //echo "        <a class='expand' href='#image-$name'></a>";
                                     echo "    </div>";
                                     echo "</div>";
                                 }
@@ -474,9 +448,7 @@ if (file_exists($dir) === false) {
                                 if (strpos($name, 'Motion') !== false) {
                                     echo "<div class='holder little'>";
                                     echo "    <div id='image-$name' class='image-lightbox'>";
-                                    //echo "        <span class='close'><a href='#'>X</a></span>";
                                     echo "        <img src='$dir$file' alt='$name' title='$name'>";
-                                    //echo "        <a class='expand' href='#image-$name'></a>";
                                     echo "    </div>";
                                     echo "</div>";
                                 }
@@ -515,9 +487,7 @@ if (file_exists($dir) === false) {
                                 if (strpos($name, 'Weather') !== false) {
                                     echo "<div class='holder'>";
                                     echo "    <div id='image-$name' class='image-lightbox'>";
-                                    //echo "        <span class='close'><a href='#'>X</a></span>";
                                     echo "        <img src='$dir$file' alt='$name' title='$name'>";
-                                    //echo "        <a class='expand' href='#image-$name'></a>";
                                     echo "    </div>";
                                     echo "</div>";
                                 }
