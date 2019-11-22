@@ -2,13 +2,13 @@
 	"id" : "Opening",
 	"name" : "Opening",
 	"version": "1.0",
-	"description" : "Plugin pour créer un ouvrant paramètrable à souhait et intégrant plusieurs calques et capteurs en un widget",
+	"description" : "Plugin pour créer un ouvrant paramétrable à souhait et intégrant plusieurs calques et capteurs en un widget",
 	"licence" : "AGPL",
 	"author" : "Virux, CyrilPhoenix, Slobberbone",
 	"require" : "2.3",
 	"category" : "automatisation",
 	"hasDependency" : 0,
 	"hasOwnDeamon" : 0,
-	"documentation" : "https://github.com/cyrilphoenix71/jeedom_Opening/blob/stable/doc/fr_FR/index.asciidoc",
-	"changelog" : "https://github.com/cyrilphoenix71/jeedom_Opening/blob/stable/doc/fr_FR/changelog.asciidoc"
+	"documentation" : "https://github.com/cyrilphoenix71/jeedom_Opening/blob/master/doc/fr_FR/index.asciidoc",
+	"changelog" : "https://github.com/cyrilphoenix71/jeedom_Opening/blob/master/doc/fr_FR/changelog.asciidoc"
 }
