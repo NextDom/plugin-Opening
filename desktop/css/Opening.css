@@ -1,3 +1,23 @@
+/* This file is part of NextDom Software.
+ *
+ * NextDom is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * NextDom Software is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with NextDom Software. If not, see <http://www.gnu.org/licenses/>.
+ *
+ * @Support <https://www.nextdom.org>
+ * @Email   <admin@nextdom.org>
+ * @Authors/Contributors: Sylvaner, cyrilphoenix71, slobberbone, Virux54
+ */
+ 
 /*customselect*/
 .Openingconfig .customselect {
 	width: 100%;
@@ -35,7 +55,7 @@
 .Openingconfig .customselect .dropdown-menu>li:hover,
 .Openingconfig .customselect .dropdown-menu>li.active{
 	background: #585e61;
-} 
+}
 /*customposition*/
 
 .Openingconfig .customposition {
@@ -213,10 +233,10 @@ i[data-toggle="popover"] {
 }
 
 .popover-title {
-	background-color: #4B7731; 
-	color: #FFFFFF; 
+	background-color: #4B7731;
+	color: #FFFFFF;
 }
- 
+
 .popover-content {
 	background-color: #343637;
 	color: #FFFFFF;

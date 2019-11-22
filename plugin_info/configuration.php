@@ -128,20 +128,6 @@ if (!isConnect()) {
                 0px 0px 20px rgba(255,255,255,0.4);
         }
 
-        /*div[id^=image]:target {
-                width: 450px;
-                height: 300px;
-                z-index: 5000;
-                top: 50px;
-                left: 200px;
-        }
-        div[id^=image]:target .close {
-                display: block;
-        }
-        
-        div[id^=image]:target .expand {
-                display: none;
-        }*/
         <?php
         $dir          = 'plugins/Opening/core/template/dashboard/images/';
         $file_display = array('jpg', 'jpeg', 'png', 'gif');
@@ -167,7 +153,7 @@ if (!isConnect()) {
 </head>
 <form class="form-horizontal">
     <div class="panel panel-info" style="height: 100%;">
-        <div class="panel-heading" role="tab">
+        <div class="panel-heading with-border" role="tab">
             <h4 class="panel-title">
                 Plugin Opening
             </h4>
@@ -214,7 +200,7 @@ if (!isConnect()) {
                         <img src="https://www.paypalobjects.com/fr_FR/FR/i/btn/btn_donate_LG.gif" alt="{{Faire un don via Paypal au développeur Slobberbone}}">
                     </a>
                 </li>
-            </div>	
+            </div>
         </div>
     </div>
     <div class="panel panel-info" style="height: 100%;">
@@ -244,9 +230,7 @@ if (file_exists($dir) === false) {
             if (strpos($name, 'Opening') !== false) {
                 echo "<div class='holder'>";
                 echo "    <div id='image-$name' class='image-lightbox'>";
-                //echo "        <span class='close'><a href='#'>X</a></span>";
                 echo "        <img src='$dir$file' alt='$name' title='$name'>";
-                //echo "        <a class='expand' href='#image-$name'></a>";
                 echo "    </div>";
                 echo "</div>";
             }

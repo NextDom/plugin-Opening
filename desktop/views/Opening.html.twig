@@ -1,0 +1,82 @@
+{#
+
+/* This file is part of NextDom Software.
+ *
+ * NextDom is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * NextDom Software is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with NextDom Software. If not, see <http://www.gnu.org/licenses/>.
+ *
+ * @Support <https://www.nextdom.org>
+ * @Email   <admin@nextdom.org>
+ * @Authors/Contributors: Sylvaner, cyrilphoenix71, slobberbone, Virux54
+ */
+
+#}
+<section class="content-header">
+    <div class="action-bar">
+        <div class="action-group">
+            <a class="btn btn-danger btn-action-bar" href="index.php?v=d&p=administration"><i class="fas fa-chevron-left"></i>{{ Retour }}</a>
+        </div>
+        <div class="action-group">
+            <a class="btn btn-success btn-action-bar pull-right" id="bt_save"><i class="fas fa-save"></i>{{ 'common.save' | trans }}</a>
+            <a class="btn btn-danger btn-action-bar pull-right bt_cancelModifs"><i class="fas fa-times"></i>{{ 'common.cancel'|trans }}</a>
+            <a class="btn btn-warning btn-action-bar pull-right" id="bt_refreshCron"><i class="fas fa-refresh"></i>{{ 'Rafraîchir' }}</a>
+        </div>
+    </div>
+</section>
+
+<section class="content Openingconfig">
+		<div class="row eqLogicThumbnailDisplay">
+				<div class="col-xs-12">
+						<div class="box box-danger">
+								<div class="box-header with-border">
+										<h3 class="box-title"><i class="fas fa-cog"></i>{{ 'Gestion' }}</h3>
+								</div>
+								<div class="box-body text-center">
+										<a class="btn btn-app eqLogicAction" data-action="gotoPluginConf"><i class="fas fa-cog"></i>{{ 'Configuration' }}</a>
+										<a class="btn btn-app eqLogicAction" data-action="add"><i class="fas fa-plus-circle"></i>{{ 'Ajouter' }}</a>
+								</div>
+						</div>
+				</div>
+		</div>
+
+		<div class="row">
+				<div class="col-xs-12">
+						<div class="box box-primary">
+								<div class="box-header with-border">
+										<h3 class="box-title"><i class="icon jeedom-fenetre-ferme"></i>{{Mes Ouvertures}}</h3>
+								</div>
+								<div class="box-body text-center">
+                    {% for openingEqLogic in eqLogics|sort %}
+                        <div class="eqLogicDisplayCard cursor" data-eqLogic_id="' . openingEqLogic.id . '" style="background-color : #ffffff; height : 200px;margin-bottom : 0px;padding : 5px;border-radius: 2px;width : 140px;margin-left : 10px;" >
+                            {% if openingEqLogic.windowmodel == '' %}
+                                <img src="plugins/Opening/doc/images/Opening_icon2.png" height="100" width="115" style="margin-top : 10px;margin-bottom : 20px;"/>
+                            {% else %}
+                                <span class="OpeningWrp family'.$eqLogic->getConfiguration('familymodel','').'" style="height:100px;width:100px;margin-top : 10px;">';
+                                    <span class="layer back bg"><img src="plugins/Opening/core/template/dashboard/images/' . openingEqLogic.backmodel . '"/></span>
+                                    {% if openingEqLogic.familymodel == '6' %}
+                                        <span class="layer store bg"><img style="left:-140%;top:0%;" src="plugins/Opening/core/template/dashboard/images/' . openingEqLogic.storemodel . '"/></span>
+                                    {% else %}
+                                        <span class="layer store bg"><img style="top:-140%;left:0%;" src="plugins/Opening/core/template/dashboard/images/' . openingEqLogic.storemodel . '"/></span>
+                                    {% endif %}
+                                    <span class="layer window"><img src="plugins/Opening/core/template/dashboard/images/' . openingEqLogic.windowmodel . '"/></span>
+                                </span>
+                            {% endif %}
+                        </div>
+                    {% endfor %}
+                    <br>
+                    <span style="font-size : 1.1em;position:relative; top : 0px;word-break: break-all;white-space: pre-wrap;word-wrap: break-word;">' . openingEqLogic.name . '</span>
+								</div>
+						</div>
+				</div>
+		</div>
+</section>

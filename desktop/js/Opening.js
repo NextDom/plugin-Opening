@@ -1,184 +1,256 @@
+/* This file is part of NextDom Software.
+*
+* NextDom is free software: you can redistribute it and/or modify
+* it under the terms of the GNU General Public License as published by
+* the Free Software Foundation, either version 3 of the License, or
+* (at your option) any later version.
+*
+* NextDom Software is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+* GNU General Public License for more details.
+*
+* You should have received a copy of the GNU General Public License
+* along with NextDom Software. If not, see <http://www.gnu.org/licenses/>.
+*
+* @Support <https://www.nextdom.org>
+* @Email   <admin@nextdom.org>
+* @Authors/Contributors: Sylvaner, cyrilphoenix71, slobberbone, Virux54
+*/
 
-/* This file is part of Jeedom.
- *
- * Jeedom is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * Jeedom is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with Jeedom. If not, see <http://www.gnu.org/licenses/>.
+// Page init
+loadInformations();
+initEvents();
+
+/**
+* Load informations in all forms of the page
+*/
+function loadInformations() {
+		$('[data-toggle="popover"]').popover();
+		$("#table_cmd").sortable({axis: "y", cursor: "move", items: ".cmd", placeholder: "ui-state-highlight", tolerance: "intersect", forcePlaceholderSize: true});
+}
+
+/**
+ * Init events on the profils page
  */
-$('[data-toggle="popover"]').popover();
-//customselect
-$('body').on( 'click','.customselect li', function() {
-	var $customselect = $(this).closest('.customselect');
-	$(this).siblings('li').removeClass('active');
-	$(this).addClass('active');
-	$customselect.find('.dropdown-toggle .modelcaption').html($(this).html());
-	$customselect.find('input:first').val($(this).data('value'));
-});
+function initEvents() {
+		//customselect
+		$('body').on( 'click','.customselect li', function() {
+			var $customselect = $(this).closest('.customselect');
+			$(this).siblings('li').removeClass('active');
+			$(this).addClass('active');
+			$customselect.find('.dropdown-toggle .modelcaption').html($(this).html());
+			$customselect.find('input:first').val($(this).data('value'));
+		});
+		$('body').on( 'change','.customselect input[data-l2key]', function() {
+			if($(this).val()=='')
+				$(this).closest('.customselect').find('li:first').click();
+			else
+				$(this).closest('.customselect').find('li[data-value="'+$(this).val()+'"]').click();
+		});
 
-$('body').on( 'change','.customselect input[data-l2key]', function() {
-	if($(this).val()=='')
-		$(this).closest('.customselect').find('li:first').click();
-	else
-		$(this).closest('.customselect').find('li[data-value="'+$(this).val()+'"]').click();
-});
+		//customselect special case
+		$('body').on( 'click','.customselect:has(input[data-l2key="familymodel"]) li', function(event) {
+			$('body .modellist li[data-family]').hide();
+			$('body .modellist li[data-family="'+$(this).data('value')+'"]').show();
+			$('body .preview .OpeningWrp').removeClass('family0 family1 family2 family3 family4 family5 family6 family7 family8 family9').addClass('family'+$(this).data('value'));
+			if($.inArray( $(this).data('value'), [1,2,3,4,5,8,9] ) > -1)
+			{
+				$('body [data-layer="store"] .modellist li[data-family="0"]').show();
+			}
+			if(typeof event.originalEvent == 'object')
+			{
+				$('body [data-layer="window"] .modellist li:first').click();
+				$('body [data-layer="store"] .modellist li:first').click();
+			}
+		});
+		$('body').on( 'click','.customselect:has(input[data-l2key="windowmodel"]) li', function(event) {
+			if($(this).data('withstore') == '1')
+			{
+				$('body [data-layer="store"] .modellist li:first').click();
+			}
+		});
 
-//customselect special case
-$('body').on( 'click','.customselect:has(input[data-l2key="familymodel"]) li', function(event) {
-	$('body .modellist li[data-family]').hide();
-	$('body .modellist li[data-family="'+$(this).data('value')+'"]').show();
-	$('body .preview .OpeningWrp').removeClass('family0 family1 family2 family3 family4 family5 family6 family7 family8 family9').addClass('family'+$(this).data('value'));
-	if($.inArray( $(this).data('value'), [1,2,3,4,5,8,9] ) > -1)
-	{
-		$('body [data-layer="store"] .modellist li[data-family="0"]').show();
-	}
-	if(typeof event.originalEvent == 'object')
-	{
-		$('body [data-layer="window"] .modellist li:first').click();
-		$('body [data-layer="store"] .modellist li:first').click();
-	}
-});
+		//positionlist
+		$('body').on( 'click','.positionlist li', function() {
+			$('body .preview .OpeningWrp .'+$(this).closest('[data-layer]').data('layer')+' img').removeClass('TopLeft TopCenter TopRight CenterLeft CenterCenter CenterRight BottomLeft BottomCenter BottomRight').addClass($(this).data('value'));
+		});
 
-$('body').on( 'click','.customselect:has(input[data-l2key="windowmodel"]) li', function(event) {
-	if($(this).data('withstore') == '1')
-	{
-		$('body [data-layer="store"] .modellist li:first').click();
-	}
-});
+		//modellist
+		$('body').on( 'click','.modellist li', function() {
+			var $wrp = $(this).closest('[data-layer]');
+			if($wrp.data('layer'))
+			{
+				if($wrp.data('layer') == 'window')
+				{
+					refreshWindowStore($(this).data('value'));
+				}else{
+					$('body .preview .OpeningWrp .'+$wrp.data('layer')+' img').attr('src','plugins/Opening/core/template/dashboard/images/'+ $(this).data('value'));
+				}
+			}
+		});
 
-//positionlist
-$('body').on( 'click','.positionlist li', function() {
-	$('body .preview .OpeningWrp .'+$(this).closest('[data-layer]').data('layer')+' img').removeClass('TopLeft TopCenter TopRight CenterLeft CenterCenter CenterRight BottomLeft BottomCenter BottomRight').addClass($(this).data('value'));
-});
+		//customposition
+		$('body').on( 'change','.customposition [data-l2key]', function() {
+			$(this).closest('.customposition').find('[data-value="'+$(this).val()+'"]').click();
+		});
+		$('body').on( 'click','.customposition [data-value]', function() {
+			var $customposition = $(this).closest('.customposition');
+			$customposition.find('[data-value]').removeClass('active');
+			$(this).addClass('active');
+			$customposition.find('input:first').val($(this).data('value'));
+		});
 
-//modellist
-$('body').on( 'click','.modellist li', function() {
-	var $wrp = $(this).closest('[data-layer]');
-	if($wrp.data('layer'))
-	{
-		if($wrp.data('layer') == 'window')
-		{
-			refreshWindowStore($(this).data('value'));
-		}else{
-			$('body .preview .OpeningWrp .'+$wrp.data('layer')+' img').attr('src','plugins/Opening/core/template/dashboard/images/'+ $(this).data('value'));
-		}
-	}
-});
+		//size
+		$('body').on( 'change','input[data-l2key].layersize', function() {
+			var $wrp = $(this).closest('[data-layer]');
+			if($wrp.data('layer'))
+			{
+				var $elm =$('body .preview .OpeningWrp .'+$wrp.data('layer')+' img');
+				var size = $(this).val();
+				if(size=='')
+				{
+					size = '42px';
+				}else{
+					if($.isNumeric( size ))
+						size = size+'px';
+				}
+				$elm.css({'height':size,'width':size});
+			}
+		});
 
-//customposition
-$('body').on( 'change','.customposition [data-l2key]', function() {	
-	$(this).closest('.customposition').find('[data-value="'+$(this).val()+'"]').click();
-});
+		//marges
+		$('body').on( 'change','input[data-l2key].layermarges', function() {
+			var $wrp = $(this).closest('[data-layer]');
+			if($wrp.data('layer'))
+			{
+				var $elm =$('body .preview .OpeningWrp .'+$wrp.data('layer')+' img');
+				var marges = $(this).val();
+				if(marges=='')
+				{
+					marges = '0%';
+				}else{
+					if($.isNumeric( marges ))
+						marges = marges+'%';
+				}
+				$elm.css({'top':marges,'left':marges});
+			}
+		});
 
-$('body').on( 'click','.customposition [data-value]', function() {
-	var $customposition = $(this).closest('.customposition');
-	$customposition.find('[data-value]').removeClass('active');
-	$(this).addClass('active');
-	$customposition.find('input:first').val($(this).data('value'));
-});
+		//mode avancé
+		$('body').on( 'change','input[data-l2key="modeadvancedplugin"]', function() {
+			$('body .Openingconfig').toggleClass('modeadvanced', $(this)[0].checked);
+		});
+		$('body').on( 'change','input[data-l2key="modeStoreplugin"]', function() {
+			$('body .Openingconfig').toggleClass('modeStore', $(this)[0].checked);
+			refreshWindowStore($('input[data-l2key="windowmodel"]').val());
+		});
+		$('body').on( 'change','input[data-l2key="modeBatplugin"]', function() {
+			$('body .Openingconfig').toggleClass('modeBat', $(this)[0].checked);
+		});
+		$('body').on( 'change','input[data-l2key="modeLockplugin"]', function() {
+			$('body .Openingconfig').toggleClass('modeLock', $(this)[0].checked);
+		});
+		$('body').on( 'change','input[data-l2key="modeAlarmplugin"]', function() {
+			$('body .Openingconfig').toggleClass('modeAlarm', $(this)[0].checked);
+		});
+		$('body').on( 'change','input[data-l2key="modeMotionplugin"]', function() {
+			$('body .Openingconfig').toggleClass('modeMotion', $(this)[0].checked);
+		});
+		$('body').on( 'change','input[data-l2key="modeWeatherplugin"]', function() {
+			$('body .Openingconfig').toggleClass('modeWeather', $(this)[0].checked);
+		});
+		$('body').on( 'change','input[data-l2key="modeTemperatureplugin"]', function() {
+			$('body .Openingconfig').toggleClass('modeTemperature', $(this)[0].checked);
+		});
 
-//size
-$('body').on( 'change','input[data-l2key].layersize', function() {
-	var $wrp = $(this).closest('[data-layer]');
-	if($wrp.data('layer'))
-	{
-		var $elm =$('body .preview .OpeningWrp .'+$wrp.data('layer')+' img');
-		var size = $(this).val();
-		if(size=='')
-		{
-			size = '42px';
-		}else{
-			if($.isNumeric( size ))
-				size = size+'px';
-		}
-		$elm.css({'height':size,'width':size});
-	}
-});
+		// Taillage widget
+		$('body').on( 'change','input[data-l2key="windowsize"]', function() {
+			$('body .preview .OpeningWrp').css({'height':$(this).val()+'px','width':$(this).val()+'px',});
+		});
 
-//marges
-$('body').on( 'change','input[data-l2key].layermarges', function() {
-	var $wrp = $(this).closest('[data-layer]');
-	if($wrp.data('layer'))
-	{
-		var $elm =$('body .preview .OpeningWrp .'+$wrp.data('layer')+' img');
-		var marges = $(this).val();
-		if(marges=='')
-		{
-			marges = '0%';
-		}else{
-			if($.isNumeric( marges ))
-				marges = marges+'%';
-		}
-		$elm.css({'top':marges,'left':marges});
-	}
-});
+		// Miroir window
+		$('body').on( 'change','input[data-l2key="windowinvertposition"]', function() {
+			$('body .layer.window img').css('transform', ($(this)[0].checked) ? 'scaleX(-1)' : '');
+		});
 
-//mode avancé
-$('body').on( 'change','input[data-l2key="modeadvancedplugin"]', function() {
-	$('body .Openingconfig').toggleClass('modeadvanced', $(this)[0].checked);
-});
-$('body').on( 'change','input[data-l2key="modeStoreplugin"]', function() {
-	$('body .Openingconfig').toggleClass('modeStore', $(this)[0].checked);
-	refreshWindowStore($('input[data-l2key="windowmodel"]').val());
-});
-$('body').on( 'change','input[data-l2key="modeBatplugin"]', function() {
-	$('body .Openingconfig').toggleClass('modeBat', $(this)[0].checked);
-});
-$('body').on( 'change','input[data-l2key="modeLockplugin"]', function() {
-	$('body .Openingconfig').toggleClass('modeLock', $(this)[0].checked);
-});
-$('body').on( 'change','input[data-l2key="modeAlarmplugin"]', function() {
-	$('body .Openingconfig').toggleClass('modeAlarm', $(this)[0].checked);
-});
-$('body').on( 'change','input[data-l2key="modeMotionplugin"]', function() {
-	$('body .Openingconfig').toggleClass('modeMotion', $(this)[0].checked);
-});
-$('body').on( 'change','input[data-l2key="modeWeatherplugin"]', function() {
-	$('body .Openingconfig').toggleClass('modeWeather', $(this)[0].checked);
-});
-$('body').on( 'change','input[data-l2key="modeTemperatureplugin"]', function() {
-	$('body .Openingconfig').toggleClass('modeTemperature', $(this)[0].checked);
-});
+		// Rotation widget
+		$('body').on( 'change','input[data-l2key="windowrotateX"]', function() {
+			refreshTransform();
+		});
+		$('body').on( 'change','input[data-l2key="windowrotateY"]', function() {
+			refreshTransform();
+		});
+		$('body').on( 'change','input[data-l2key="windowrotateZ"]', function() {
+			refreshTransform();
+		});
+		$('body').on( 'change','input[data-l2key="windowperscpective"]', function() {
+			refreshTransform();
+		});
+		$('body').on( 'change','input[data-l2key="windowrotate"]', function() {
+			refreshTransform();
+		});
+		$('body').on( 'change','input[data-l2key="rotatestates"]', function() {
+			refreshTransform();
+		});
 
-// Taillage widget
-$('body').on( 'change','input[data-l2key="windowsize"]', function() {
-	$('body .preview .OpeningWrp').css({'height':$(this).val()+'px','width':$(this).val()+'px',});
-});
+		//Virtual info add
+		$("#bt_addVirtualInfo").on('click', function (event) {
+		    var _cmd = {type: 'info'};
+		    addCmdToTable(_cmd);
+		});
 
-// Miroir window
-$('body').on( 'change','input[data-l2key="windowinvertposition"]', function() {
-	$('body .layer.window img').css('transform', ($(this)[0].checked) ? 'scaleX(-1)' : '');
-});
+		//Virtual action add
+		$("#bt_addVirtualAction").on('click', function (event) {
+		    var _cmd = {type: 'action'};
+		    addCmdToTable(_cmd);
+		});
 
-// Rotation widget
-$('body').on( 'change','input[data-l2key="windowrotateX"]', function() {
-	refreshTransform();
-});
-$('body').on( 'change','input[data-l2key="windowrotateY"]', function() {
-	refreshTransform();
-});
-$('body').on( 'change','input[data-l2key="windowrotateZ"]', function() {
-	refreshTransform();
-});
-$('body').on( 'change','input[data-l2key="windowperscpective"]', function() {
-	refreshTransform();
-});
-$('body').on( 'change','input[data-l2key="windowrotate"]', function() {
-	refreshTransform();
-});
-$('body').on( 'change','input[data-l2key="rotatestates"]', function() {
-	refreshTransform();
-});
-function refreshTransform()
-{
+		$("#table_cmd").delegate(".listEquipementInfo", 'click', function () {
+		    var el = $(this);
+		    jeedom.cmd.getSelectModal({cmd: {type: 'info'}}, function (result) {
+		        var calcul = el.closest('tr').find('.cmdAttr[data-l1key=configuration][data-l2key=' + el.data('input') + ']');
+		        calcul.atCaret('insert', result.human);
+		    });
+		});
+
+		$("#table_cmd").delegate(".listEquipementAction", 'click', function () {
+		    var el = $(this);
+		    var subtype = $(this).closest('.cmd').find('.cmdAttr[data-l1key=subType]').value();
+		    jeedom.cmd.getSelectModal({cmd: {type: 'action', subType: subtype}}, function (result) {
+		        var calcul = el.closest('tr').find('.cmdAttr[data-l1key=configuration][data-l2key=' + el.attr('data-input') + ']');
+		        calcul.atCaret('insert', result.human);
+		    });
+		});
+
+		$('body').on( 'click','.selectEqInfo', function() {
+			var el = $(this);
+			jeedom.cmd.getSelectModal({cmd: {type: 'info'}}, function(result) {
+				var calcul = el.closest('tr').find('.cmdAttr[data-l1key=configuration][data-l2key=calcul]');
+				el.closest('.input-group').find('input').value(result.human);
+			});
+		});
+
+		$('body').on( 'click','.selectEqAction', function() {
+			var el = $(this);
+			jeedom.cmd.getSelectModal({cmd: {type: 'action'}}, function(result) {
+				el.closest('.input-group').find('input').value(result.human);
+			});
+		});
+
+		$('#table_cmd').on( 'click','.selectEqAuto', function() {
+			var el = $(this);
+			var type = el.closest('tr.cmd').find('select[data-l1key="type"]').val();
+				jeedom.cmd.getSelectModal({cmd: {type: type}}, function(result) {
+				el.closest('.input-group').find('input').value(result.human);
+			});
+		});
+}
+
+/**
+ * Refresh transformation
+ */
+function refreshTransform() {
 	var transform ='';
 	if($('body input[data-l2key="rotatestates"]')[0].checked)
 	{
@@ -217,16 +289,17 @@ function refreshTransform()
 	}
 }
 
-// window specifik
-function refreshWindowStore(windowImgSrc)
-{
+/**
+ * Refresh windowStore
+ */
+function refreshWindowStore(windowImgSrc) {
 	var $elm =$('body .preview .OpeningWrp .window img');
 	var XState = (windowImgSrc.indexOf('XState') !== -1);
 	if(XState)
 	{
 		$('body .preview .OpeningWrp .layer.store').hide(); //hide store
 	}
-	
+
 	$elm.each(function(index){
 		windowImg = windowImgSrc;
 		if($(this).hasClass('closed'))
@@ -242,68 +315,18 @@ function refreshWindowStore(windowImgSrc)
 	});
 }
 
-//system
- $("#bt_addVirtualInfo").on('click', function (event) {
-    var _cmd = {type: 'info'};
-    addCmdToTable(_cmd);
-});
-
- $("#bt_addVirtualAction").on('click', function (event) {
-    var _cmd = {type: 'action'};
-    addCmdToTable(_cmd);
-});
-
-$("#table_cmd").delegate(".listEquipementInfo", 'click', function () {
-    var el = $(this);
-    jeedom.cmd.getSelectModal({cmd: {type: 'info'}}, function (result) {
-        var calcul = el.closest('tr').find('.cmdAttr[data-l1key=configuration][data-l2key=' + el.data('input') + ']');
-        calcul.atCaret('insert', result.human);
-    });
-});
-
- $("#table_cmd").delegate(".listEquipementAction", 'click', function () {
-    var el = $(this);
-    var subtype = $(this).closest('.cmd').find('.cmdAttr[data-l1key=subType]').value();
-    jeedom.cmd.getSelectModal({cmd: {type: 'action', subType: subtype}}, function (result) {
-        var calcul = el.closest('tr').find('.cmdAttr[data-l1key=configuration][data-l2key=' + el.attr('data-input') + ']');
-        calcul.atCaret('insert', result.human);
-    });
-});
-
-$('body').on( 'click','.selectEqInfo', function() {
-	var el = $(this);
-	jeedom.cmd.getSelectModal({cmd: {type: 'info'}}, function(result) {
-		var calcul = el.closest('tr').find('.cmdAttr[data-l1key=configuration][data-l2key=calcul]');
-		el.closest('.input-group').find('input').value(result.human);
-	});
-});
-
-$('body').on( 'click','.selectEqAction', function() {
-	var el = $(this);
-	jeedom.cmd.getSelectModal({cmd: {type: 'action'}}, function(result) {
-		el.closest('.input-group').find('input').value(result.human);
-	});
-});
-
-$('#table_cmd').on( 'click','.selectEqAuto', function() {
-	var el = $(this);
-	var type = el.closest('tr.cmd').find('select[data-l1key="type"]').val();
-		jeedom.cmd.getSelectModal({cmd: {type: type}}, function(result) {
-		el.closest('.input-group').find('input').value(result.human);
-	});
-});
-
-$("#table_cmd").sortable({axis: "y", cursor: "move", items: ".cmd", placeholder: "ui-state-highlight", tolerance: "intersect", forcePlaceholderSize: true});
-
- function addCmdToTable(_cmd) {
-    if (!isset(_cmd)) {
-        var _cmd = {configuration: {}};
-    }
-    if (!isset(_cmd.configuration)) {
-        _cmd.configuration = {};
-    }
-    if (init(_cmd.logicalId) == 'refresh') {
-     return;
+/**
+ * Add commande
+ */
+function addCmdToTable(_cmd) {
+	  if (!isset(_cmd)) {
+	      var _cmd = {configuration: {}};
+	  }
+	  if (!isset(_cmd.configuration)) {
+	      _cmd.configuration = {};
+	  }
+	  if (init(_cmd.logicalId) == 'refresh') {
+	   return;
  }
 
  if (init(_cmd.type) == 'info') {
