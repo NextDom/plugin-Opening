@@ -1,8 +1,8 @@
-# Plugin Opening pour Jeedom
+# Plugin Opening pour NextDom/Jeedom
 
 <img src="doc/images/Opening_icon.png" align="right">
 
-Afficher une Ouvrant totalement personnalisable et dynamiquement lié à vos équipements Jeedom.
+Afficher une Ouvrant totalement personnalisable et dynamiquement lié à vos équipements NextDom/Jeedom.
 
 
 ### Market
